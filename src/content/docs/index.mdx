@@ -16,7 +16,7 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, Card, CardGrid } from '@astrojs/starlight/components';
 
 ## About Rasmus
 
@@ -39,13 +39,14 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 		- [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)
 	</Card>
 	<Card title="Experience" icon="seti:db">
-		- Linux (RedHat, Debian, Kali, NixOS*)
-		- Databases (OracleDB, Redis, PostgreSQL, MySQL/MariaDB)
-		- Containers (Docker, (On-Prem & Azure) Kubernetes, Rancher)
-		- Infrastructure as Code (Ansible*, Terraform, Packer, Puppet)
-		- Git (GitHub, GitLab, Azure DevOps)
-		- Networking (Cisco, Fortinet*)
-		- Windows Servers (Active Directory, Group Policy Management, RSAT)
-		- `* = Basic knowledge`
+		<Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>
+		- **Linux** (RedHat, Debian, Kali, NixOS*)
+		- **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB)
+		- **Containers** (Docker, (On-Prem & Azure) Kubernetes, Rancher)
+		- **Infrastructure as Code** (Ansible*, Terraform, Packer*, Puppet)
+		- **Code** (HTML, PHP, CSS, Bash, Python, Javascript/Typescript*)
+		- **Git** (GitHub, GitLab, Azure DevOps*)
+		- **Networking** (Cisco, Fortinet*)
+		- **Windows Servers** (Active Directory, Group Policy Management, RSAT)
 	</Card>
 </CardGrid>
