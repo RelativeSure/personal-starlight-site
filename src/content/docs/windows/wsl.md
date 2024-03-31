@@ -20,8 +20,9 @@ Gist to personal VSCode settings file
 
 GitHub repo to personal dotfiles
 
-> [!TIP]
-> Dotfile repo still work in progress
+:::caution
+Dotfile repo still work in progress
+:::
 
 [WSL Configuration dotfiles](https://github.com/RelativeSure/wsl-configuration)
 
