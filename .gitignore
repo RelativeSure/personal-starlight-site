@@ -24,3 +24,5 @@ pnpm-debug.log*
 bun.lockb
 package-lock.json
 .vercel/
+.frontmatter/
+frontmatter.json
