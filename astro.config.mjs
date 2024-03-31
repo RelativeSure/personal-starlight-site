@@ -1,9 +1,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightImageZoom from 'starlight-image-zoom'
+import starlightImageZoom from 'starlight-image-zoom';
+import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
+	output: 'static',
+  adapter: vercel({
+		imageService: true,
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+    },
+	}),
 	integrations: [
 		starlight({
 			plugins: [starlightImageZoom()],
@@ -15,13 +23,6 @@ export default defineConfig({
 				linkedin: 'https://www.linkedin.com/in/rjørgensen',
 			},
 			sidebar: [
-				// {
-				// 	label: 'Guides',
-				// 	items: [
-				// 		// Each item here is one entry in the navigation menu.
-				// 		{ label: 'Example Guide', link: '/guides/example/' },
-				// 	],
-				// },
 				{
 					label: 'IT Security',
 					autogenerate: { directory: 'it-security' },
