@@ -79,10 +79,6 @@ export default defineConfig({
             acceptNecessaryBtn: 'Reject',
             showPreferencesBtn: 'Manage preferences',
             closeIconLabel: 'Reject all and close'
-            // footer: `
-            //             <a href="#link">Privacy Policy</a>
-            //             <a href="#link">Impressum</a>
-            //         `,
           },
           preferencesModal: {
             title: 'Cookie preferences',
@@ -93,43 +89,6 @@ export default defineConfig({
               title: 'Cookie usage',
               description: 'We are using Vercel Web Analytics and Speed Insights.'
             },
-            // {
-            //   title: 'Strictly necessary cookies',
-            //   description:
-            //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            //   linkedCategory: 'necessary',
-            // },
-            // {
-            //   title: 'Performance and analytics cookies',
-            //   description:
-            //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            //   linkedCategory: 'analytics',
-            //   cookieTable: {
-            //     headers: {
-            //       name: 'Cookie',
-            //       domain: 'Domain',
-            //       desc: 'Description',
-            //     },
-            //     body: [
-            //       {
-            //         name: '_ga',
-            //         domain: 'yourdomain.com',
-            //         desc: 'description ...',
-            //       },
-            //       {
-            //         name: '_gid',
-            //         domain: 'yourdomain.com',
-            //         desc: 'description ...',
-            //       },
-            //     ],
-            //   },
-            // },
-            // {
-            //   title: 'Advertisement and targeting cookies',
-            //   description:
-            //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            //   linkedCategory: 'ads',
-            // },
             {
               title: 'More information',
               description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.'
@@ -140,5 +99,14 @@ export default defineConfig({
     }
   }), sitemap()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    imageService: true,
+    edgeMiddleware: true,
+    webAnalytics: {
+      enabled: true,
+    },
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+    },
+  }),
 });
