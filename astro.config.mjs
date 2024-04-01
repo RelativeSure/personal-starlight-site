@@ -3,8 +3,7 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
-
-import vercel from "@astrojs/vercel/serverless";
+import netlify from '@astrojs/netlify/functions';
 
 // https://astro.build/config
 export default defineConfig({
@@ -99,12 +98,5 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-  output: "server",
-  adapter: vercel({
-    imageService: true,
-    edgeMiddleware: true,
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: netlify()
 });
