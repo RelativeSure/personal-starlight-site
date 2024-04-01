@@ -105,8 +105,5 @@ export default defineConfig({
     webAnalytics: {
       enabled: true,
     },
-    imagesConfig: {
-      sizes: [320, 640, 1280],
-    },
   }),
 });
