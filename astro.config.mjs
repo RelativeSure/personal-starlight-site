@@ -12,6 +12,7 @@ export default defineConfig({
   integrations: [starlight({
     plugins: [starlightImageZoom()],
     title: 'Rasmus Brøgger Jørgensen',
+    lastUpdated: true,
     social: {
       github: 'https://github.com/RelativeSure',
       mastodon: 'https://infosec.exchange/@relativesure',
