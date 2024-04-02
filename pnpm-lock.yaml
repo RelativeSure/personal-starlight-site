@@ -15,8 +15,8 @@ dependencies:
     specifier: 0.21.3
     version: 0.21.3(astro@4.5.12)
   '@astrojs/vercel':
-    specifier: 7.5.0
-    version: 7.5.0(astro@4.5.12)
+    specifier: 7.5.1
+    version: 7.5.1(astro@4.5.12)
   '@jop-software/astro-cookieconsent':
     specifier: 3.0.0
     version: 3.0.0(vanilla-cookieconsent@3.0.0)
@@ -219,8 +219,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@7.5.0(astro@4.5.12):
-    resolution: {integrity: sha512-RYFZNHkfNgFNb41nblG26ubw5924hAjLYs+Bpp4kttcsYJAX/wavIfDbfZQ/XesDTKwIH+Gi/+3c5bldZePFDA==}
+  /@astrojs/vercel@7.5.1(astro@4.5.12):
+    resolution: {integrity: sha512-jYGGddRY7QruazIfV+jFrfv0vAYY5tzTfG7YsCGDxZJXx3MOwcNeFjIkv3SJ4C2h+jecxnBiPk7gRxQcVS5KXw==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
