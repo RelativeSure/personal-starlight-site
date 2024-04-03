@@ -16,7 +16,7 @@
     "@astrojs/vercel": "7.5.2",
     "@vercel/speed-insights": "1.0.10",
     "@jop-software/astro-cookieconsent": "3.0.0",
-    "astro": "4.5.14",
+    "astro": "4.5.15",
     "detect-libc": "2.0.3",
     "sharp": "0.33.3",
     "starlight-image-zoom": "0.2.0",
