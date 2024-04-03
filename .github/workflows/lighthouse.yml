@@ -35,14 +35,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install Vercel CLI
-        run: pnpm i -g vercel
+     # - name: Install Vercel CLI
+     #   run: pnpm i -g vercel
 
       - name: Build website
         run: pnpm run build
 
-      - name: Serve website
-        run: vercel deploy --prebuilt
+      #- name: Serve website
+      #  run: vercel deploy --prebuilt
+      - name: Run website
+        run: pnpm run dev
 
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
