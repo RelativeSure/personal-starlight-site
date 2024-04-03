@@ -43,8 +43,8 @@ jobs:
 
       #- name: Serve website
       #  run: vercel deploy --prebuilt
-      - name: Run website
-        run: pnpm run dev
+     # - name: Run website
+     #   run: pnpm run dev
 
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
