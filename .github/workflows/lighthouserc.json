@@ -3,9 +3,9 @@
     "collect": {
       "startServerCommand": "npm run dev",
       "startServerReadyPattern": "Serving",
-      "startServerReadyTimeout": 10000,
+      "startServerReadyTimeout": "10000",
 
-      "staticDistDir": "dist/",
+      "staticDistDir": "${process.env.GITHUB_WORKSPACE}/dist/",
 
       "numberOfRuns": 1,
 
