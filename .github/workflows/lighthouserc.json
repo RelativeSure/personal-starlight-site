@@ -5,7 +5,7 @@
       "startServerReadyPattern": "Serving",
       "startServerReadyTimeout": 10000,
 
-      "staticDistDir": "/home/runner/work/personal-starlight-site/personal-starlight-site/dist/",
+      "staticDistDir": ".vercel/output/static",
 
       "numberOfRuns": 1,
 
