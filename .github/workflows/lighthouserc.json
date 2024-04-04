@@ -3,9 +3,9 @@
     "collect": {
       "startServerCommand": "npm run dev",
       "startServerReadyPattern": "Serving",
-      "startServerReadyTimeout": "10000",
+      "startServerReadyTimeout": 10000,
 
-      "staticDistDir": "${process.env.GITHUB_WORKSPACE}/dist/",
+      "staticDistDir": "/home/runner/work/personal-starlight-site/personal-starlight-site/dist/",
 
       "numberOfRuns": 1,
 
