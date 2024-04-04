@@ -20,35 +20,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
-
-      - name: Setup PNPM
-        uses: pnpm/action-setup@v3
-        with:
-          version: 'latest'
+        uses: actions/checkout@v4.1.1
 
       - name: Use Node.js
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4.0.2
+        uses: actions/setup-node@v4.0.2 
         with:
           node-version: 20
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v3.0.0
+        with:
+          version: 'latest'
 
       - name: Install dependencies
         run: pnpm install
 
-     # - name: Install Vercel CLI
-     #   run: pnpm i -g vercel
-
       - name: Build website
         run: pnpm run build
 
-      #- name: Serve website
-      #  run: vercel deploy --prebuilt
-     # - name: Run website
-     #   run: pnpm run dev
-
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@1b0e7c33270fbba31a18a0fbb1de7cc5256b6d39 # 11.4.0
+        uses: treosh/lighthouse-ci-action@11.4.0 
         with:
           urls: |
             http://localhost:4321
@@ -58,7 +50,7 @@ jobs:
 
       - name: Format lighthouse score
         id: format_lighthouse_score
-        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # 7.0.1
+        uses: actions/github-script@7.0.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -70,7 +62,7 @@ jobs:
 
       - name: Add Lighthouse stats as comment
         id: comment_to_pr
-        uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31 # 2.9.0
+        uses: marocchino/sticky-pull-request-comment@2.9.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.pull_request.number }}
