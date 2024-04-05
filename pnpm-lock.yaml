@@ -12,8 +12,8 @@ dependencies:
     specifier: 3.1.2
     version: 3.1.2
   '@astrojs/starlight':
-    specifier: 0.21.3
-    version: 0.21.3(astro@4.5.16)
+    specifier: 0.21.4
+    version: 0.21.4(astro@4.5.16)
   '@astrojs/ts-plugin':
     specifier: ^1.6.1
     version: 1.6.1
@@ -37,7 +37,7 @@ dependencies:
     version: 0.33.3
   starlight-image-zoom:
     specifier: 0.2.0
-    version: 0.2.0(@astrojs/starlight@0.21.3)
+    version: 0.2.0(@astrojs/starlight@0.21.4)
   typescript:
     specifier: 5.4.4
     version: 5.4.4
@@ -202,8 +202,8 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@astrojs/starlight@0.21.3(astro@4.5.16):
-    resolution: {integrity: sha512-SvIKB8ECR+RhYdTg3bKsTL2e5Yac75eTatfOMGjkp3ced9Bx34xXMSURuKx/AHBWo1X/+WoWzKT3Y3d2y7kkVg==}
+  /@astrojs/starlight@0.21.4(astro@4.5.16):
+    resolution: {integrity: sha512-n9K9WMYN9HtRsZ6u06yLXKMaLMo+a6ifDoBkP24S6EFOsgFUa4P9/t+xliDnNFTf3KGtm9YTdSUA3oI/2wq1eQ==}
     peerDependencies:
       astro: ^4.2.7
     dependencies:
@@ -225,7 +225,6 @@ packages:
       rehype: 13.0.1
       remark-directive: 3.0.0
       unified: 11.0.4
-      unist-util-remove: 4.0.0
       unist-util-visit: 5.0.0
       vfile: 6.0.1
     transitivePeerDependencies:
@@ -4795,13 +4794,13 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: false
 
-  /starlight-image-zoom@0.2.0(@astrojs/starlight@0.21.3):
+  /starlight-image-zoom@0.2.0(@astrojs/starlight@0.21.4):
     resolution: {integrity: sha512-wtNO87kGZ8XPolAEFkYebSg9MkmoynVnuqbgW3M/JfDSYhbz77IOR5nKelEPjY6Usz1csLLzAm+BSWlJ9I/agw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@astrojs/starlight': '>=0.20.0'
     dependencies:
-      '@astrojs/starlight': 0.21.3(astro@4.5.16)
+      '@astrojs/starlight': 0.21.4(astro@4.5.16)
       rehype-raw: 7.0.0
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
@@ -5142,14 +5141,6 @@ packages:
     dependencies:
       '@types/unist': 3.0.2
       unist-util-visit: 5.0.0
-    dev: false
-
-  /unist-util-remove@4.0.0:
-    resolution: {integrity: sha512-b4gokeGId57UVRX/eVKej5gXqGlc9+trkORhFJpu9raqZkZhU0zm8Doi05+HaiBsMEIJowL+2WtQ5ItjsngPXg==}
-    dependencies:
-      '@types/unist': 3.0.2
-      unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
     dev: false
 
   /unist-util-stringify-position@3.0.3:
