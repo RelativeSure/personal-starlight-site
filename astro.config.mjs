@@ -39,7 +39,13 @@ export default defineConfig({
       autogenerate: {
         directory: 'windows'
       }
-    }]
+    }, {
+      label: 'Bookmarks',
+      autogenerate: {
+        directory: 'bookmarks'
+      }
+    }
+  ]
   }), cookieconsent({
     guiOptions: {
       consentModal: {
