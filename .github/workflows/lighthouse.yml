@@ -33,7 +33,7 @@ jobs:
           version: 'latest'
 
       - name: Install PNPM
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build website
         run: pnpm run build
