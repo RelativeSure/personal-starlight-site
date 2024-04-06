@@ -18,12 +18,13 @@
     "@jop-software/astro-cookieconsent": "3.0.0",
     "@vercel/speed-insights": "1.0.10",
     "astro": "4.5.16",
+    "astro-icon": "1.1.0",
     "detect-libc": "2.0.3",
+    "estree-walker": "^3.0.3",
     "sharp": "0.33.3",
     "starlight-image-zoom": "0.2.0",
     "typescript": "5.4.4",
-    "vanilla-cookieconsent": "3.0.1",
-    "astro-icon": "1.1.0"
+    "vanilla-cookieconsent": "3.0.1"
   },
   "engines": {
     "node": ">=20.0"
