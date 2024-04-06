@@ -1,24 +1,8 @@
 {
   "ci": {
     "collect": {
-      "startServerCommand": "pnpm run dev",
-      "startServerReadyPattern": "Serving",
-      "startServerReadyTimeout": 10000,
-
       "staticDistDir": ".vercel/output/static",
-
-      "numberOfRuns": 1,
-
-      "settings": {
-        "skipAudits": [
-          "robots-txt",
-          "canonical",
-          "tap-targets",
-          "is-crawlable",
-          "works-offline",
-          "offline-start-url"
-        ]
-      }
+      "numberOfRuns": 1
     }
   }
 }
