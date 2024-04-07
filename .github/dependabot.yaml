@@ -5,17 +5,20 @@
 
 version: 2
 updates:
-  - package-ecosystem: "devcontainers" # See documentation for possible values
-    directory: "/" # Location of package manifests
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "github-actions"
+
+  - package-ecosystem: devcontainers
     directory: "/"
     schedule:
-      interval: "daily"
-  - package-ecosystem: "pnpm"
+      interval: daily
+
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: daily
+
+  - package-ecosystem: pnpm
+    directory: "/"
+    schedule:
+      interval: daily
 
  
