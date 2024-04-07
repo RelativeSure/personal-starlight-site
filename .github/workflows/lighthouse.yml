@@ -28,14 +28,27 @@ jobs:
         with:
           node-version: 20
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v1
+      - uses: pnpm/action-setup@v3
+        name: Install pnpm
+        with:
+          version: 8
+          run_install: false
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: bun install
-
-      - name: Build website
-        run: bun run build
+        run: pnpm install
 
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
@@ -45,23 +58,23 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
 
-      # - name: Format lighthouse score
-      #   id: format_lighthouse_score
-      #   uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     script: |
-      #       const results = ${{ steps.lighthouse_audit.outputs.manifest }}
-      #       const links = ${{ steps.lighthouse_audit.outputs.links }}
-      #       const createLighthouseReport = (await import(`${process.env.GITHUB_WORKSPACE}/admin/scripts/formatLighthouseReport.js`)).default;
-      #       const comment = createLighthouseReport({ results, links });
-      #       core.setOutput("comment", comment);
+      - name: Format lighthouse score
+        id: format_lighthouse_score
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const results = ${{ steps.lighthouse_audit.outputs.manifest }}
+            const links = ${{ steps.lighthouse_audit.outputs.links }}
+            const createLighthouseReport = (await import(`${process.env.GITHUB_WORKSPACE}/admin/scripts/formatLighthouseReport.js`)).default;
+            const comment = createLighthouseReport({ results, links });
+            core.setOutput("comment", comment);
 
-      # - name: Add Lighthouse stats as comment
-      #   id: comment_to_pr
-      #   uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31 # v2.9.0
-      #   with:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     number: ${{ github.event.pull_request.number }}
-      #     header: lighthouse
-      #     message: ${{ steps.format_lighthouse_score.outputs.comment }}
+      - name: Add Lighthouse stats as comment
+        id: comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@331f8f5b4215f0445d3c07b4967662a32a2d3e31 # v2.9.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          header: lighthouse
+          message: ${{ steps.format_lighthouse_score.outputs.comment }}
