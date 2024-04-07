@@ -4,7 +4,7 @@ import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
 
-import vercel from "@astrojs/vercel/serverless";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -44,8 +44,7 @@ export default defineConfig({
       autogenerate: {
         directory: 'bookmarks'
       }
-    }
-  ]
+    }]
   }), cookieconsent({
     guiOptions: {
       consentModal: {
@@ -95,8 +94,7 @@ export default defineConfig({
             sections: [{
               title: 'Cookie usage',
               description: 'We are using Vercel Web Analytics and Speed Insights.'
-            },
-            {
+            }, {
               title: 'More information',
               description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.'
             }]
@@ -106,11 +104,5 @@ export default defineConfig({
     }
   }), sitemap()],
   output: "server",
-  adapter: vercel({
-    imageService: true,
-    edgeMiddleware: true,
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  adapter: cloudflare()
 });
