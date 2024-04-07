@@ -95,10 +95,6 @@ export default defineConfig({
             sections: [{
               title: 'Cookie usage',
               description: 'We are using Vercel Web Analytics and Speed Insights.'
-            },
-            {
-              title: 'More information',
-              description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc__link" href="#yourdomain.com">contact me</a>.'
             }]
           }
         }
