@@ -103,6 +103,11 @@ export default defineConfig({
       }
     }
   }), sitemap()],
+  adapter: cloudflare({}),
   output: "server",
-  adapter: cloudflare()
+  vite: {
+    ssr: {
+      external: ['node:url', 'node:path', 'node:child_process', 'node:fs'],
+    },
+  },
 });
