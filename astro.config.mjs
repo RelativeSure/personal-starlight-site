@@ -4,8 +4,6 @@ import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
 
-import node from '@astrojs/node';
-
 export default defineConfig({
   site: 'https://rasmusj.dk',
   integrations: [starlight({
@@ -101,9 +99,6 @@ export default defineConfig({
         }
       }
     }
-  }), sitemap()],
-  output: "server",
-  adapter: node({
-    mode: 'standalone',
   }),
+  sitemap()],
 });
