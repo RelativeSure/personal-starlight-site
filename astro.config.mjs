@@ -101,7 +101,7 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-  output: "server",
+  output: "hybrid",
   adapter: vercel({
     imageService: true,
     edgeMiddleware: true,
