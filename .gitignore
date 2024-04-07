@@ -23,5 +23,3 @@ pnpm-debug.log*
 .vercel
 
 megalinter-reports/
-
-bun.lockb
