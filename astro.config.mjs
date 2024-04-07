@@ -4,9 +4,8 @@ import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
 
-import cloudflare from "@astrojs/cloudflare";
+import node from '@astrojs/node';
 
-// https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
   integrations: [starlight({
@@ -103,11 +102,8 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-  adapter: cloudflare({}),
   output: "server",
-  vite: {
-    ssr: {
-      external: ['node:url', 'node:path', 'node:child_process', 'node:fs'],
-    },
-  },
+  adapter: node({
+    mode: 'standalone',
+  }),
 });
