@@ -43,7 +43,7 @@ jobs:
         id: ml
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/flavors/
-        uses: oxsecurity/megalinter/flavors/javascript@beta
+        uses: oxsecurity/megalinter/flavors/javascript@v7.10.0
         env:
           # VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} # Validates all source when push on master, else just the git diff with master. Override with true if you always want to lint all sources
           VALIDATE_ALL_CODEBASE: true
