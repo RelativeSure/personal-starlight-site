@@ -1,46 +1,46 @@
 {
-	"name": "personal-starlight-site-devcontainer",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-	"features": {
-        "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {},
-        "ghcr.io/devcontainers-contrib/features/lighthouse-cli:1": {},
-        "ghcr.io/devcontainers-contrib/features/starship:1": {},
-        "ghcr.io/devcontainers-contrib/features/vercel-cli:1": {},
-		"ghcr.io/devcontainers/features/node:1": {
-            "version": "latest"
-        },
-		"ghcr.io/devcontainers/features/git:1": {
-            "version": "latest"
-        },
-        "ghcr.io/devcontainers/features/common-utils:2": {
-            "installZsh": false,
-            "installOhMyZsh": false,
-            "installOhMyZshConfig": false
-        }
-	},
-    "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts",
+  "name": "personal-starlight-site-devcontainer",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/fish-apt-get:1": {},
+    "ghcr.io/devcontainers-contrib/features/lighthouse-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/starship:1": {},
+    "ghcr.io/devcontainers-contrib/features/vercel-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "installOhMyZsh": false,
+      "installOhMyZshConfig": false
+    }
+  },
+  "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts",
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-                "ms-vscode.vscode-typescript-next",
-                "github.github-vscode-theme",
-                "astro-build.astro-vscode",
-                "streetsidesoftware.code-spell-checker",
-                "streetsidesoftware.code-spell-checker-danish",
-                "github.vscode-github-actions",
-                "visualstudioexptteam.vscodeintellicode",
-                "visualstudioexptteam.intellicode-api-usage-examples",
-                "yzhang.markdown-all-in-one",
-                "unifiedjs.vscode-mdx",
-                "christian-kohler.npm-intellisense",
-                "redhat.vscode-yaml"
-			]
-		}
-	}
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "ms-vscode.vscode-typescript-next",
+        "github.github-vscode-theme",
+        "astro-build.astro-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-danish",
+        "github.vscode-github-actions",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "yzhang.markdown-all-in-one",
+        "unifiedjs.vscode-mdx",
+        "christian-kohler.npm-intellisense",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
 }
