@@ -43,7 +43,7 @@ jobs:
         id: ml
         # You can override MegaLinter flavor used to have faster performances
         # More info at https://megalinter.io/flavors/
-        uses: oxsecurity/megalinter/flavors/javascript@v7.10.0
+        uses: oxsecurity/megalinter/flavors/javascript@a7a0163b6c8ff7474a283d99a706e27483ddd80f # v7.10.0
         env:
           # VALIDATE_ALL_CODEBASE: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }} # Validates all source when push on master, else just the git diff with master. Override with true if you always want to lint all sources
           VALIDATE_ALL_CODEBASE: true
@@ -62,7 +62,7 @@ jobs:
             mega-linter.log
       - name: Upload MegaLinter scan results to GitHub Security tab
         if: success() || failure()
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@4355270be187e1b672a7a1c7c7bae5afdc1ab94a # v3
         with:
           sarif_file: 'megalinter-reports/megalinter-report.sarif'
 
