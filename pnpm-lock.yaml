@@ -18,8 +18,8 @@ dependencies:
     specifier: ^1.6.1
     version: 1.6.1
   '@astrojs/vercel':
-    specifier: 7.5.2
-    version: 7.5.2(astro@4.6.0)
+    specifier: 7.5.3
+    version: 7.5.3(astro@4.6.0)
   '@jop-software/astro-cookieconsent':
     specifier: 3.0.0
     version: 3.0.0(vanilla-cookieconsent@3.0.1)
@@ -278,8 +278,8 @@ packages:
       vscode-languageserver-textdocument: 1.0.11
     dev: false
 
-  /@astrojs/vercel@7.5.2(astro@4.6.0):
-    resolution: {integrity: sha512-Wvz5wCvmc1iu22KcVEpEAXsyzAWrVIkcXOReqd6QAUTJ5Kj1oYsZdZqJuibjbM6hDfnhTF78W64XXUKH+Wb0cg==}
+  /@astrojs/vercel@7.5.3(astro@4.6.0):
+    resolution: {integrity: sha512-rIqcoGoW+SJv+rOjMjMq5ICdBZP+zbuenXyNhTa6UIUZldm4pZLLImuBDvTxB/A3JvJZRoTwZtsEgORXav1bbg==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
