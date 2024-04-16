@@ -9,9 +9,8 @@ pull_request_rules:
           - merge-queued
 
   - name: Automatic merge
-    description: Merge when PR passes all branch protection and has label automerge
+    description: Merge when PR passes all branch protection
     conditions:
-      - label = automerge
       - or:
         - author = dependabot[bot]
         - author = KubeArchitectBot
