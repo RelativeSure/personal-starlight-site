@@ -13,8 +13,8 @@ pull_request_rules:
     conditions:
       - label = automerge
       - or:
-        - author = dependabot[bot]
-        - author = KubeArchitectBot
+          - author = dependabot[bot]
+          - author = KubeArchitectBot
     actions:
       merge:
 
@@ -22,7 +22,7 @@ pull_request_rules:
     description: Add a label to a pull request with conflict to spot it easily
     conditions:
       - conflict
-      - '-closed'
+      - "-closed"
     actions:
       label:
         toggle:
