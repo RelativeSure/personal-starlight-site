@@ -16,8 +16,6 @@ updates:
         patterns: [ "*" ]
     labels:
       - "npm"
-    reviewers:
-      - "RelativeSure"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -29,8 +27,6 @@ updates:
         patterns: [ "*" ]
     labels:
       -  "github-actions"
-    reviewers:
-      - "RelativeSure"
 
   - package-ecosystem: "devcontainers"
     directory: "/"
@@ -42,5 +38,3 @@ updates:
         patterns: [ "*" ]
     labels:
       -  "devcontainers"
-    reviewers:
-      - "RelativeSure"
