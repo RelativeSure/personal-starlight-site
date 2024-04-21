@@ -5,4 +5,5 @@
     "cleanUrls": true,
     "framework": "astro",
     "regions": ["fra1", "cdg1"]
+
 }
