@@ -4,11 +4,5 @@
      "ignoreCommand": "git diff HEAD^ HEAD --quiet ':!./.github'", 
      "cleanUrls": true, 
      "framework": "astro", 
-     "regions": ["fra1"],
-     "functions": {
-       "src/content/docs/**/*": {
-         "memory": 3009,
-         "maxDuration": 10
-       }
-     }
+     "regions": ["fra1"]
 }
