@@ -1,8 +1,6 @@
-{ 
-     "buildCommand": "pnpm run build", 
-     "installCommand": "pnpm install", 
-     "ignoreCommand": "git diff HEAD^ HEAD --quiet ':!./.github'", 
-     "cleanUrls": true, 
-     "framework": "astro", 
-     "regions": ["fra1"]
+{
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet ':!./.github'",
+  "cleanUrls": true,
+  "framework": "astro",
+  "regions": ["fra1"]
 }
