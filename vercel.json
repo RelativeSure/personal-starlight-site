@@ -1,0 +1,12 @@
+{
+    "buildCommand": "pnpm run build",
+    "installCommand": "pnpm install",
+    "ignoreCommand": "git diff HEAD^ HEAD --quiet ':!./.github'",
+    "cleanUrls": true,
+    "framework": "astro",
+    "regions": ["fra1", "cdg1"],
+    "functions": {
+      "runtime": "Node.js@20.x"
+    }
+
+}
