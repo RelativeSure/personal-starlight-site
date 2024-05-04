@@ -11,9 +11,11 @@ keywords:
 
 All the commands listed here can be used in each linux distro.
 
-## Check flags of each command
+## Check manual for each command
 
-Run `man <command>` in CLI or use this website `TODO: < FIND LINK >`
+**OBS:** Not every command has a manual page.
+
+Run `man <command>` in CLI
 
 ## List items in directory
 
@@ -30,3 +32,7 @@ Open the file in a window and open it at the top: `head`.
 ## Site to explain what a command does
 
 [https://explainshell.com](https://explainshell.com)
+
+## Alias
+
+`alias ll='ls' -la`
