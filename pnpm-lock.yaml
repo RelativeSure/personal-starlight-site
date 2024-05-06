@@ -15,8 +15,8 @@ importers:
         specifier: 3.1.4
         version: 3.1.4
       '@astrojs/starlight':
-        specifier: 0.22.1
-        version: 0.22.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
+        specifier: 0.22.2
+        version: 0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/ts-plugin':
         specifier: ^1.6.1
         version: 1.6.1
@@ -43,7 +43,7 @@ importers:
         version: 0.33.3
       starlight-image-zoom:
         specifier: 0.3.0
-        version: 0.3.0(@astrojs/starlight@0.22.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5)))
+        version: 0.3.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5)))
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -103,8 +103,8 @@ packages:
   '@astrojs/sitemap@3.1.4':
     resolution: {integrity: sha512-po8CqDCK14O6phU1mB5C8SyVLyQEa+7pJM8oXxs1mVh8DgvxxaA5E7lak1vzOmBcyyyHBW32jakGqNYc66sBRw==}
 
-  '@astrojs/starlight@0.22.1':
-    resolution: {integrity: sha512-RATQZ4AVr78K30rupsNGTC+JLtHNimHpBtbslzC1bPoaG/TetTi6iUX8dQhHARKstq6sSBatYkZJcX3CGgzS2w==}
+  '@astrojs/starlight@0.22.2':
+    resolution: {integrity: sha512-z9OR6ChDKIqaw8P9Xer0u7mG33icnszBhqi28BAb1zDt21yHgOjXcGbP73T+3bzG1aWdZD85/4WmktufzD1DPA==}
     peerDependencies:
       astro: ^4.2.7
 
@@ -2752,7 +2752,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.6
 
-  '@astrojs/starlight@0.22.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))':
+  '@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))':
     dependencies:
       '@astrojs/mdx': 2.3.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/sitemap': 3.1.4
@@ -5457,9 +5457,9 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-image-zoom@0.3.0(@astrojs/starlight@0.22.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))):
+  starlight-image-zoom@0.3.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))):
     dependencies:
-      '@astrojs/starlight': 0.22.1(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
+      '@astrojs/starlight': 0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
       rehype-raw: 7.0.0
       unist-util-visit: 5.0.0
       unist-util-visit-parents: 6.0.1
