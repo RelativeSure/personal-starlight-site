@@ -19,7 +19,7 @@ importers:
         version: 0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
       '@astrojs/ts-plugin':
         specifier: ^1.6.1
-        version: 1.6.1
+        version: 1.7.0
       '@astrojs/vercel':
         specifier: 7.5.4
         version: 7.5.4(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
@@ -112,8 +112,8 @@ packages:
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
 
-  '@astrojs/ts-plugin@1.6.1':
-    resolution: {integrity: sha512-13mkBo5K3J/mUN/pt/4qxbwBJSmm/X2HAzOZaYg2AildnN/JxiZ2rm60LMssUXhHHhrxQoKslCh06l9sHSkCMQ==}
+  '@astrojs/ts-plugin@1.7.0':
+    resolution: {integrity: sha512-AKsjdQMp5LUGSJAwBGiutFhk7dUeI1FFEza9b7pOHE9j7OTr9JNaSAL2gnSpLieiL2xPm8LOWQ3OCPfzHHerbQ==}
 
   '@astrojs/vercel@7.5.4':
     resolution: {integrity: sha512-UHFlHxoK5iM6b9DJyiWntjVN97sYqFRfFLkb6vfxHVPgztAfb5R8o15XQiBMR4kOL/PZhWfuvQNu5wGpfpGK2w==}
@@ -795,9 +795,6 @@ packages:
     peerDependencies:
       typescript: '*'
 
-  '@volar/language-core@2.1.6':
-    resolution: {integrity: sha512-pAlMCGX/HatBSiDFMdMyqUshkbwWbLxpN/RL7HCQDOo2gYBE+uS+nanosLc1qR6pTQ/U8q00xt8bdrrAFPSC0A==}
-
   '@volar/language-core@2.2.1':
     resolution: {integrity: sha512-iHJAZKcYldZgyS8gx6DfIZApViVBeqbf6iPhqoZpG5A6F4zsZiFldKfwaKaBA3/wnOTWE2i8VUbXywI1WywCPg==}
 
@@ -810,14 +807,8 @@ packages:
   '@volar/snapshot-document@2.2.1':
     resolution: {integrity: sha512-ISq74JwzdPcjw7TjZZ9VdOYdgwPoX/X3Jus3emD4ftG59v0gomIp11yz7Ds65rUi/coss/uTPse+onXR+64rpg==}
 
-  '@volar/source-map@2.1.6':
-    resolution: {integrity: sha512-TeyH8pHHonRCHYI91J7fWUoxi0zWV8whZTVRlsWHSYfjm58Blalkf9LrZ+pj6OiverPTmrHRkBsG17ScQyWECw==}
-
   '@volar/source-map@2.2.1':
     resolution: {integrity: sha512-w1Bgpguhbp7YTr7VUFu6gb4iAZjeEPsOX4zpgiuvlldbzvIWDWy4t0jVifsIsxZ99HAu+c3swiME7wt+GeNqhA==}
-
-  '@volar/typescript@2.1.6':
-    resolution: {integrity: sha512-JgPGhORHqXuyC3r6skPmPHIZj4LoMmGlYErFTuPNBq9Nhc9VTv7ctHY7A3jMN3ngKEfRrfnUcwXHztvdSQqNfw==}
 
   '@volar/typescript@2.2.1':
     resolution: {integrity: sha512-Z/tqluR7Hz5/5dCqQp7wo9C/6tSv/IYl+tTzgzUt2NjTq95bKSsuO4E+V06D0c+3aP9x5S9jggLqw451hpnc6Q==}
@@ -2801,12 +2792,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/ts-plugin@1.6.1':
+  '@astrojs/ts-plugin@1.7.0':
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@jridgewell/sourcemap-codec': 1.4.15
-      '@volar/language-core': 2.1.6
-      '@volar/typescript': 2.1.6
+      '@volar/language-core': 2.2.1
+      '@volar/typescript': 2.2.1
       semver: 7.6.0
       vscode-languageserver-textdocument: 1.0.11
 
@@ -3463,10 +3454,6 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
 
-  '@volar/language-core@2.1.6':
-    dependencies:
-      '@volar/source-map': 2.1.6
-
   '@volar/language-core@2.2.1':
     dependencies:
       '@volar/source-map': 2.2.1
@@ -3497,18 +3484,9 @@ snapshots:
       vscode-languageserver-protocol: 3.17.5
       vscode-languageserver-textdocument: 1.0.11
 
-  '@volar/source-map@2.1.6':
-    dependencies:
-      muggle-string: 0.4.1
-
   '@volar/source-map@2.2.1':
     dependencies:
       muggle-string: 0.4.1
-
-  '@volar/typescript@2.1.6':
-    dependencies:
-      '@volar/language-core': 2.1.6
-      path-browserify: 1.0.1
 
   '@volar/typescript@2.2.1':
     dependencies:
