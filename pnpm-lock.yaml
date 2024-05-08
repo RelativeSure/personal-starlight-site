@@ -42,8 +42,8 @@ importers:
         specifier: 0.33.3
         version: 0.33.3
       starlight-image-zoom:
-        specifier: 0.3.0
-        version: 0.3.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5)))
+        specifier: 0.4.0
+        version: 0.4.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5)))
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -2237,8 +2237,8 @@ packages:
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
 
-  starlight-image-zoom@0.3.0:
-    resolution: {integrity: sha512-m2B+JUs+5S443rgSyvcq8XO7Ax8yFGgPsDvoXg0JzCmJXleyz43WSOzvGiLF/Z7sCIWDNqCmbZFecOXYwOxHwQ==}
+  starlight-image-zoom@0.4.0:
+    resolution: {integrity: sha512-ATSW/X2QzG+XbxrGAIhzVgqGd08jLh443InNMHRijIeU+Y1aS4jZjs358yVNTlns8uLflz8VaI8/9PVVaYN6LQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@astrojs/starlight': '>=0.20.0'
@@ -5467,7 +5467,7 @@ snapshots:
 
   sprintf-js@1.0.3: {}
 
-  starlight-image-zoom@0.3.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))):
+  starlight-image-zoom@0.4.0(@astrojs/starlight@0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))):
     dependencies:
       '@astrojs/starlight': 0.22.2(astro@4.7.1(@types/node@20.12.8)(typescript@5.4.5))
       rehype-raw: 7.0.0
