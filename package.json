@@ -20,7 +20,7 @@
     "@vercel/speed-insights": "1.0.10",
     "astro": "4.8.4",
     "detect-libc": "2.0.3",
-    "sharp": "0.33.3",
+    "sharp": "0.33.4",
     "starlight-image-zoom": "0.4.0",
     "typescript": "5.4.5",
     "vanilla-cookieconsent": "3.0.1",
