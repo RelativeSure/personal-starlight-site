@@ -27,8 +27,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0(vanilla-cookieconsent@3.0.1)
       '@vercel/speed-insights':
-        specifier: 1.0.10
-        version: 1.0.10
+        specifier: 1.0.11
+        version: 1.0.11
       astro:
         specifier: 4.9.1
         version: 4.9.1(@types/node@20.12.12)(typescript@5.4.5)
@@ -920,8 +920,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  '@vercel/speed-insights@1.0.10':
-    resolution: {integrity: sha512-4uzdKB0RW6Ff2FkzshzjZ+RlJfLPxgm/00i0XXgxfMPhwnnsk92YgtqsxT9OcPLdJUyVU1DqFlSWWjIQMPkh0g==}
+  '@vercel/speed-insights@1.0.11':
+    resolution: {integrity: sha512-l9hzSNmJvb2Yqpgd/BzpiT0J0aQDdtqxOf3Xm+iW4PICxVvhY1ef7Otdx4GXI+88dVkws57qMzXiShz19gXzSQ==}
     peerDependencies:
       '@sveltejs/kit': ^1 || ^2
       next: '>= 13'
@@ -3734,7 +3734,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/speed-insights@1.0.10': {}
+  '@vercel/speed-insights@1.0.11': {}
 
   '@volar/kit@2.2.4(typescript@5.4.5)':
     dependencies:
