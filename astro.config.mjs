@@ -4,8 +4,6 @@ import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
 
-import vercel from "@astrojs/vercel/serverless";
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
@@ -101,12 +99,5 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-  output: "hybrid",
-  adapter: vercel({
-    imageService: true,
-    edgeMiddleware: true,
-    webAnalytics: {
-      enabled: true,
-    },
-  }),
+  output: "static"
 });
