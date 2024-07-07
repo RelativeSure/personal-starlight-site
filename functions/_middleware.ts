@@ -1,6 +1,14 @@
 import proxyflare from "@flaregun-net/proxyflare-for-pages"
 
-const routes: Route[] = []
+const routes: Route[] = [
+  {
+    from: {
+      pattern: "rasmusj.dk/proxyflare",
+      alsoMatchWWWSubdomain: true,
+    },
+    to: { url: "https://slack.com" },
+  },
+]
 
 // `PagesFunction` is from @cloudflare/workers-types
 export const onRequest: PagesFunction[] = [
@@ -12,14 +20,4 @@ export const onRequest: PagesFunction[] = [
       },
     })(context),
   // other Pages plugins and middleware
-]
-
-const routes: Route[] = [
-  {
-    from: {
-      pattern: "rasmusj.dk/proxyflare",
-      alsoMatchWWWSubdomain: true,
-    },
-    to: { url: "https://slack.com" },
-  },
 ]
