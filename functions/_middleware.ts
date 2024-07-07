@@ -1,13 +1,8 @@
-//import proxyflare from "@flaregun-net/proxyflare-for-pages"
+import proxyflare from "@flaregun-net/proxyflare-for-pages"
 
 const slackRoute: Route = {
-  {
-    from: {
-      pattern: "rasmusj.dk/proxyflare",
-      alsoMatchWWWSubdomain: true,
-    },
-    to: { url: "slack.com", statusCode: 301, },
-  },
+  from: { pattern: "rasmusj.dk/proxyflare" },
+  to: { url: "slack.com" }
 }
   
 const routes = [slackRoute]
