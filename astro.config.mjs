@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import cookieconsent from "@jop-software/astro-cookieconsent";
 import sitemap from "@astrojs/sitemap";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
@@ -99,5 +100,6 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-  output: "static"
+    output: "server",
+    adapter: cloudflare()
 });
