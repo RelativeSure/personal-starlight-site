@@ -23,14 +23,12 @@
     "starlight-image-zoom": "0.6.0",
     "typescript": "5.5.3",
     "vanilla-cookieconsent": "3.0.1",
-    "@astrojs/cloudflare": "^11.0.1"
+    "@astrojs/cloudflare": "^11.0.1",
+    "@cloudflare/workers-types": "4.20240620.0",
+    "@flaregun-net/proxyflare-for-pages": "0.1.0"
   },
   "engines": {
     "node": ">=20.0"
-  },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240620.0",
-    "@flaregun-net/proxyflare-for-pages": "^0.1.0"
   }
 }
 
