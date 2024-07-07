@@ -1,4 +1,4 @@
-import * from "@flaregun-net/proxyflare-for-pages"
+import "@flaregun-net/proxyflare-for-pages"
 
 const slackRoute: Route = {
   from: { pattern: "rasmusj.dk/proxyflare" },
