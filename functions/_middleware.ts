@@ -1,14 +1,23 @@
-import proxyflare from "@flaregun-net/proxyflare-for-pages"
+import * from "@flaregun-net/proxyflare-for-pages"
 
 const slackRoute: Route = {
   from: { pattern: "rasmusj.dk/proxyflare" },
-  to: { url: "slack.com" }
+  to: { 
+    url: "slack.com",
+    website: {
+      mode: "spa",
+      resources: [],
+      /*resources: [
+        "rasmusj.dk/proxyflare/*"
+      ]*/
+    },
+  },
 }
   
 const routes = [slackRoute]
   
 // `PagesFunction` is from @cloudflare/workers-types
-export const onRequest: PagesFunction[] = [
+/*export const onRequest: PagesFunction[] = [
   (context) =>
     proxyflare({
       config: {
@@ -17,4 +26,4 @@ export const onRequest: PagesFunction[] = [
       },
     })(context),
   // other Pages plugins and middleware
-]
+]*/
