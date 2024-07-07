@@ -8,7 +8,7 @@ const slackRoute: Route = {
 const routes = [slackRoute]
   
 // `PagesFunction` is from @cloudflare/workers-types
-/*export const onRequest: PagesFunction[] = [
+export const onRequest: PagesFunction[] = [
   (context) =>
     proxyflare({
       config: {
@@ -17,4 +17,4 @@ const routes = [slackRoute]
       },
     })(context),
   // other Pages plugins and middleware
-]*/
+]
