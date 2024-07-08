@@ -11,20 +11,26 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^11.0.1",
     "@astrojs/check": "0.8.0",
     "@astrojs/sitemap": "3.1.6",
     "@astrojs/starlight": "0.25.0",
-    "@astrojs/ts-plugin": "^1.6.1",
+    "@astrojs/ts-plugin": "^1.9.0",
+    "@flaregun-net/proxyflare-for-pages": "^0.1.0",
     "@jop-software/astro-cookieconsent": "3.0.0",
     "astro": "4.11.5",
+    "astro-icon": "1.1.0",
     "detect-libc": "2.0.3",
     "sharp": "0.33.4",
     "starlight-image-zoom": "0.6.0",
     "typescript": "5.5.3",
-    "vanilla-cookieconsent": "3.0.1",
-    "astro-icon": "1.1.0"
+    "vanilla-cookieconsent": "3.0.1"
   },
   "engines": {
     "node": ">=20.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workerd-linux-64": "^1.20240701.0",
+    "wrangler": "^3.63.1"
   }
 }
