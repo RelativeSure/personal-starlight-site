@@ -100,14 +100,11 @@ export default defineConfig({
       }
     }
   }), sitemap()],
-    output: "hybrid",
-    adapter: cloudflare()
-    // adapter: cloudflare({
-    // routes: {
-    //   extend: {
-    //     include: [{ pattern: '/functions/*' }], // Route a prerended page to the SSR function for on-demand rendering
-    //     //exclude: [{ pattern: '/pagefind/*' }], // Use Starlight's pagefind search, which is generated statically at build time
-    //   }
-    // },
-  // }),
+    output: "server",
+    adapter: cloudflare(),
+    vite: {
+      ssr: {
+        external: ['node:url', 'node:path', 'node:child_process'],
+      },
+    },
 });
