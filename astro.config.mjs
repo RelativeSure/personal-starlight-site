@@ -101,10 +101,19 @@ export default defineConfig({
     }
   }), sitemap()],
     output: "server",
-    adapter: cloudflare(),
+    adapter: cloudflare({
+      routes: {
+        extend: {
+          exclude: [{ pattern: '/pagefind/*' }, { pattern: '/dist/*' }], // Use Starlight's pagefind search, which is generated statically at build time
+        }
+      },
+    }),
     vite: {
       ssr: {
         external: ['node:url', 'node:path', 'node:child_process'],
+      },
+      build: {
+        minify: false,
       },
     },
 });
