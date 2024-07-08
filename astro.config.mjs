@@ -112,8 +112,8 @@ export default defineConfig({
       ssr: {
         external: ['node:url', 'node:path', 'node:child_process'],
       },
-      build: {
-        minify: false,
-      },
+      // build: {
+      //   minify: false,
+      // },
     },
 });
