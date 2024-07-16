@@ -22,7 +22,7 @@
     "astro-icon": "1.1.0",
     "detect-libc": "2.0.3",
     "sharp": "0.33.4",
-    "starlight-image-zoom": "0.6.0",
+    "starlight-image-zoom": "0.7.0",
     "typescript": "5.5.3",
     "vanilla-cookieconsent": "3.0.1"
   },
