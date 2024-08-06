@@ -140,7 +140,7 @@ jobs:
 
       - name: Upload MegaLinter scan results to GitHub Security tab
         if: success() || failure()
-        uses: github/codeql-action/upload-sarif@afb54ba388a7dca6ecae48f608c4ff05ff4cc77a # v3
+        uses: github/codeql-action/upload-sarif@eb055d739abdc2e8de2e5f4ba1a8b246daa779aa # v3
         with:
           sarif_file: "megalinter-reports/megalinter-report.sarif"
 
