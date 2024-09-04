@@ -30,7 +30,7 @@
     "node": ">=20.0"
   },
   "devDependencies": {
-    "@cloudflare/workerd-linux-64": "1.20240821.1",
+    "@cloudflare/workerd-linux-64": "1.20240903.0",
     "wrangler": "3.74.0"
   }
 }
