@@ -7,6 +7,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
+  output: 'server',
   integrations: [starlight({
     plugins: [starlightImageZoom()],
     title: 'Rasmus Brøgger Jørgensen',
