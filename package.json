@@ -16,15 +16,11 @@
     "@astrojs/sitemap": "3.2.0",
     "@astrojs/starlight": "0.27.1",
     "@astrojs/ts-plugin": "^1.9.0",
-    "@flaregun-net/proxyflare-for-pages": "^0.1.0",
-    "@jop-software/astro-cookieconsent": "3.0.0",
     "astro": "4.16.1",
     "astro-icon": "1.1.1",
     "detect-libc": "2.0.3",
-    "sharp": "0.33.5",
     "starlight-image-zoom": "0.8.0",
-    "typescript": "5.6.3",
-    "vanilla-cookieconsent": "3.0.1"
+    "typescript": "5.6.3"
   },
   "engines": {
     "node": ">=20.0"
