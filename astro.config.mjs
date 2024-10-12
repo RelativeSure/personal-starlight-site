@@ -16,7 +16,7 @@ export default defineConfig({
       github: 'https://github.com/RelativeSure',
       mastodon: 'https://infosec.exchange/@relativesure',
       twitter: 'https://twitter.com/RelativeSure',
-      linkedin: 'https://www.linkedin.com/in/rjørgensen'
+      linkedin: 'https://www.linkedin.com/in/rasmusbroeggerjoergensen/'
     },
     sidebar: [{
       label: 'IT Security',
@@ -45,63 +45,11 @@ export default defineConfig({
       }
     }
   ]
-  }), cookieconsent({
-    guiOptions: {
-      consentModal: {
-        layout: 'cloud',
-        position: 'bottom center',
-        equalWeightButtons: true,
-        flipButtons: false
-      },
-      preferencesModal: {
-        layout: "box",
-        position: "right",
-        equalWeightButtons: true,
-        flipButtons: false
-      }
-    },
-    categories: {
-      necessary: {
-        readOnly: true,
-        enabled: true
-      },
-      analytics: {
-        autoClear: {
-          cookies: [{
-            name: /^(_ga|_gid)/
-          }]
-        }
-      },
-      ads: {}
-    },
-    language: {
-      default: 'en',
-      translations: {
-        en: {
-          consentModal: {
-            title: "Hello traveller, it's cookie time!",
-            description: 'Our website uses essential cookies and Vercel Web Analytics, Speed Insights to ensure its proper operation and tracking cookies to understand how you interact with it. The latter will be set only after consent.',
-            acceptAllBtn: 'Accept',
-            acceptNecessaryBtn: 'Reject',
-            showPreferencesBtn: 'Manage preferences',
-            closeIconLabel: 'Reject all and close'
-          },
-          preferencesModal: {
-            title: 'Cookie preferences',
-            acceptAllBtn: 'Accept all',
-            acceptNecessaryBtn: 'Reject all',
-            savePreferencesBtn: 'Save preferences',
-            sections: [{
-              title: 'Cookie usage',
-              description: 'We are using Vercel Web Analytics and Speed Insights.'
-            }]
-          }
-        }
-      }
-    }
-  }), sitemap()],
+  }),
+  sitemap()],
     output: "server",
     adapter: cloudflare({
+      imageService: 'passthrough',
       routes: {
         extend: {
           exclude: [{ pattern: '/pagefind/*' }, { pattern: '/dist/*' }], // Use Starlight's pagefind search, which is generated statically at build time
@@ -112,8 +60,5 @@ export default defineConfig({
       ssr: {
         external: ['node:url', 'node:path', 'node:child_process'],
       },
-      // build: {
-      //   minify: false,
-      // },
     },
 });
