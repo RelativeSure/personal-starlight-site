@@ -27,6 +27,6 @@
   },
   "devDependencies": {
     "@cloudflare/workerd-linux-64": "1.20241106.1",
-    "wrangler": "3.85.0"
+    "wrangler": "3.86.0"
   }
 }
