@@ -14,7 +14,7 @@
     "@astrojs/cloudflare": "^12.0.0",
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/starlight": "0.29.2",
+    "@astrojs/starlight": "0.29.3",
     "@astrojs/ts-plugin": "^1.9.0",
     "astro": "4.16.16",
     "astro-icon": "1.1.4",
