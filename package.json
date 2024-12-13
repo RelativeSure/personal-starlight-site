@@ -1,8 +1,8 @@
 {
   "name": "starlight",
   "type": "module",
-  "version": "0.0.1",
-  "packageManager": "pnpm@9.14.4",
+  "version": "0.0.2",
+  "packageManager": "pnpm@9",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,11 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.0.0",
+    "@astrojs/cloudflare": "11.0.1",
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/starlight": "0.29.2",
-    "@astrojs/ts-plugin": "^1.9.0",
+    "@astrojs/starlight": "0.29.3",
+    "@astrojs/ts-plugin": "1.9.0",
     "astro": "4.16.16",
     "astro-icon": "1.1.4",
     "detect-libc": "2.0.3",
@@ -26,7 +26,10 @@
     "node": ">=20.0"
   },
   "devDependencies": {
-    "@cloudflare/workerd-linux-64": "1.20241202.0",
-    "wrangler": "3.92.0"
+    "@cloudflare/workerd-linux-64": "1.20241205.0",
+    "wrangler": "3.95.0"
+  },
+  "overrides": {
+    "@astrojs/mdx": "^4.0.0"
   }
 }
