@@ -1,2 +1,8 @@
+name = "personal-starlight-site"
+pages_build_output_dir = "./dist"
+keep_vars = true
+compatibility_date = "latest"
+compatibility_flags = [ "nodejs_compat_v2" ]
+
 [vars]
 NODE_VERSION = "v22.11.0"
