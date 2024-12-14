@@ -3,12 +3,13 @@ import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
+import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
   adapter: cloudflare({
-     imageService: 'cloudflare',
+     imageService: 'passthrough',
      platformProxy: {
       enabled: true,
     },
@@ -57,5 +58,6 @@ export default defineConfig({
     }
   ]
   }),
-  sitemap()]
+  sitemap(),
+  mdx()]
 });
