@@ -7,7 +7,18 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
+  adapter: cloudflare({
+     imageService: 'cloudflare',
+     platformProxy: {
+      enabled: true,
+    },
+  }),
   output: 'server',
+  vite: {
+    ssr: {
+      external: ['node:buffer', 'node:path', 'node:url'],
+    },
+  },
   integrations: [starlight({
     plugins: [starlightImageZoom()],
     title: 'Rasmus Brøgger Jørgensen',
@@ -46,7 +57,5 @@ export default defineConfig({
     }
   ]
   }),
-  sitemap()],
-    output: "server",
-    adapter: cloudflare()
+  sitemap()]
 });
