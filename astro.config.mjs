@@ -9,7 +9,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: 'https://rasmusj.dk',
   adapter: cloudflare({
-     imageService: 'cloudflare',
+     imageService: 'passthrough',
      platformProxy: {
       enabled: true,
     },
