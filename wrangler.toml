@@ -1,6 +1,5 @@
 name = "personal-starlight-site"
 pages_build_output_dir = "./dist"
-keep_vars = true
 compatibility_date = "latest"
 compatibility_flags = [ "nodejs_compat_v2" ]
 
