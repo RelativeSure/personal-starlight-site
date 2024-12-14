@@ -13,7 +13,7 @@ export default defineConfig({
   output: 'server',
   vite: {
     ssr: {
-      external: ['node:buffer', 'node:path'],
+      external: ['node:buffer', 'node:path', 'node:url'],
     },
   },
   integrations: [starlight({
