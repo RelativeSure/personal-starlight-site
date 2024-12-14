@@ -8,7 +8,10 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: 'https://rasmusj.dk',
   adapter: cloudflare({
-     imageService: 'cloudflare'
+     imageService: 'cloudflare',
+     platformProxy: {
+      enabled: true,
+    },
   }),
   output: 'server',
   vite: {
