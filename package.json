@@ -18,7 +18,7 @@
     "@astrojs/starlight": "0.30.3",
     "astro": "5.1.2",
     "astro-icon": "1.1.5",
-    "starlight-image-zoom": "0.10.0",
+    "starlight-image-zoom": "0.10.1",
     "typescript": "5.7.2"
   },
   "engines": {
