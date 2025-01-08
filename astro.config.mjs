@@ -55,6 +55,11 @@ export default defineConfig({
       autogenerate: {
         directory: 'bookmarks'
       }
+    }, {
+      label: 'Projects',
+      autogenerate: {
+        directory: 'projects'
+      }
     }
   ]
   }),
