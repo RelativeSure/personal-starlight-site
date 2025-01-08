@@ -63,7 +63,7 @@ workflows:
     jobs:
       - megalinter/megalinter:
           persist_megalinter_reports: true
-          flavor: python
+          flavor: javascript
       - after-megalinter:
           requires:
             - megalinter/megalinter
