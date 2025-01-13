@@ -16,7 +16,7 @@
     "@astrojs/mdx": "4.0.5",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/starlight": "0.31.0",
-    "astro": "5.1.5",
+    "astro": "5.1.6",
     "astro-icon": "1.1.5",
     "starlight-image-zoom": "0.10.1",
     "typescript": "5.7.3"
