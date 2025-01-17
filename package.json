@@ -15,7 +15,7 @@
     "@astrojs/cloudflare": "12.2.0",
     "@astrojs/mdx": "4.0.6",
     "@astrojs/sitemap": "3.2.1",
-    "@astrojs/starlight": "0.31.0",
+    "@astrojs/starlight": "0.31.1",
     "astro": "5.1.7",
     "astro-icon": "1.1.5",
     "starlight-image-zoom": "0.10.1",
