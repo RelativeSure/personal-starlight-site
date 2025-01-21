@@ -4,6 +4,8 @@ import starlightImageZoom from 'starlight-image-zoom';
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
 import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,57 +14,70 @@ export default defineConfig({
      imageService: 'passthrough',
      platformProxy: {
       enabled: true,
+      persist: {
+        path: './.cache/wrangler/v3'
+      },
+      routes: {
+        extend: {
+          include: [
+            { pattern: '/dist' },
+            { pattern: '/static'},
+          ],
+          exclude: [
+            { pattern: '/pagefind/*' },
+            { pattern: '/src/assets/*'},
+          ], 
+        }
+      },
     },
   }),
-  output: 'server',
-  vite: {
-    ssr: {
-      external: ['node:buffer', 'node:path', 'node:url'],
-    },
-  },
-  integrations: [starlight({
-    plugins: [starlightImageZoom()],
-    title: 'Rasmus Brøgger Jørgensen',
-    lastUpdated: true,
-    social: {
-      github: 'https://github.com/RelativeSure',
-      mastodon: 'https://infosec.exchange/@relativesure',
-      twitter: 'https://twitter.com/RelativeSure',
-      linkedin: 'https://www.linkedin.com/in/rasmusbroeggerjoergensen/'
-    },
-    sidebar: [{
-      label: 'IT Security',
-      autogenerate: {
-        directory: 'it-security'
+  // output: 'server',
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    starlight({
+      plugins: [starlightImageZoom()],
+      title: 'Rasmus Brøgger Jørgensen',
+      tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
+      lastUpdated: true,
+      social: {
+        github: 'https://github.com/RelativeSure',
+        mastodon: 'https://infosec.exchange/@relativesure',
+        'x.com': 'https://x.com/RelativeSure',
+        linkedin: 'https://www.linkedin.com/in/rasmusbroeggerjoergensen/'
+      },
+      sidebar: [{
+        label: 'IT Security',
+        autogenerate: {
+          directory: 'it-security'
+        }
+      }, {
+        label: 'Kubernetes',
+        autogenerate: {
+          directory: 'kubernetes'
+        }
+      }, {
+        label: 'Linux',
+        autogenerate: {
+          directory: 'linux'
+        }
+      }, {
+        label: 'Windows',
+        autogenerate: {
+          directory: 'windows'
+        }
+      }, {
+        label: 'Bookmarks',
+        autogenerate: {
+          directory: 'bookmarks'
+        }
+      }, {
+        label: 'Projects',
+        autogenerate: {
+          directory: 'projects'
+        }
       }
-    }, {
-      label: 'Kubernetes',
-      autogenerate: {
-        directory: 'kubernetes'
-      }
-    }, {
-      label: 'Linux',
-      autogenerate: {
-        directory: 'linux'
-      }
-    }, {
-      label: 'Windows',
-      autogenerate: {
-        directory: 'windows'
-      }
-    }, {
-      label: 'Bookmarks',
-      autogenerate: {
-        directory: 'bookmarks'
-      }
-    }, {
-      label: 'Projects',
-      autogenerate: {
-        directory: 'projects'
-      }
-    }
-  ]
-  }),
-  sitemap(),
-  mdx()]
+    ]
+  }), sitemap(), mdx(), react(), tailwind()]
 });
