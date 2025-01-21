@@ -1,3 +1,5 @@
+import starlightPlugin from '@astrojs/starlight-tailwind';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ['class'],
@@ -53,5 +55,8 @@ export default {
     		}
     	}
     },
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		starlightPlugin()
+	],
 }
