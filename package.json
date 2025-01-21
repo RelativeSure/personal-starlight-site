@@ -20,8 +20,6 @@
     "@astrojs/starlight-tailwind": "^3.0.0",
     "@astrojs/tailwind": "^5.1.5",
     "@radix-ui/react-slot": "^1.1.1",
-    "@sentry/astro": "^8.50.0",
-    "@spotlightjs/astro": "^2.3.0",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "astro": "5.1.8",
