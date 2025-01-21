@@ -19,9 +19,14 @@ export default defineConfig({
   output: 'server',
   vite: {
     ssr: {
-      external: ['node:buffer', 'node:path', 'node:url', 'node:fs'],
-    },
-  },
+      noExternal: true
+    }
+  }
+  // vite: {
+  //   ssr: {
+  //     external: ['node:buffer', 'node:path', 'node:url', 'node:fs'],
+  //   },
+  // },
   integrations: [
     starlight({
       plugins: [
