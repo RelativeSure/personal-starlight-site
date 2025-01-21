@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
 import sitemap from "@astrojs/sitemap";
-import cloudflare from "@astrojs/cloudflare";
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
@@ -10,28 +9,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://rasmusj.dk',
-  adapter: cloudflare({
-     imageService: 'passthrough',
-     platformProxy: {
-      enabled: true,
-      persist: {
-        path: './.cache/wrangler/v3'
-      },
-      routes: {
-        extend: {
-          include: [
-            { pattern: '/dist' },
-            { pattern: '/static'},
-          ],
-          exclude: [
-            { pattern: '/pagefind/*' },
-            { pattern: '/src/assets/*'},
-          ], 
-        }
-      },
-    },
-  }),
-  // output: 'server',
   integrations: [
     tailwind({
       applyBaseStyles: false,
