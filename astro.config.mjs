@@ -4,6 +4,9 @@ import starlightImageZoom from 'starlight-image-zoom';
 import sitemap from "@astrojs/sitemap";
 import cloudflare from "@astrojs/cloudflare";
 import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
+// import tailwind from '@astrojs/tailwind';
+import starlightPlugin from '@astrojs/starlight-tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,13 +24,19 @@ export default defineConfig({
     },
   },
   integrations: [starlight({
-    plugins: [starlightImageZoom()],
+    plugins: [
+      starlightImageZoom(),
+      starlightPlugin()
+    ],
     title: 'Rasmus Brøgger Jørgensen',
+    customCss: [
+      'src/styles/globals.css',
+    ],
     lastUpdated: true,
     social: {
       github: 'https://github.com/RelativeSure',
       mastodon: 'https://infosec.exchange/@relativesure',
-      twitter: 'https://twitter.com/RelativeSure',
+      "x.com": 'https://x.com/RelativeSure',
       linkedin: 'https://www.linkedin.com/in/rasmusbroeggerjoergensen/'
     },
     sidebar: [{
@@ -62,7 +71,9 @@ export default defineConfig({
       }
     }
   ]
+  }), 
+  tailwind({
+    applyBaseStyles: false,
   }),
-  sitemap(),
-  mdx()]
+  sitemap(), mdx(), react()]
 });

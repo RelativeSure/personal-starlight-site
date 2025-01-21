@@ -1,0 +1,60 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+// import CustomComponent from './CustomComponent.astro';
+import '@/styles/globals.css'
+import { Button } from "@/components/ui/button"
+---
+
+<StarlightPage 
+  frontmatter={{
+    title: 'Rasmus Broegger Joergensen',
+    description: 'Personal website of Rasmus Broegger Joergensen',
+    template: 'splash',
+    hero: {
+      title: 'Rasmus Broegger Joergensen',
+      tagline: 'DevOps Engineer with a passion for automation and cloud technologies',
+      image: {
+        file: {
+          src: '@/assets/rasmus.png',
+          width: 40,
+          height: 40,
+          format: 'png',
+        }
+      },
+      actions: [
+        {
+          text: 'Projects',
+          link: '/projects/work-in-progress/',
+          variant: 'primary',
+          icon: 'right-arrow'
+        },
+        {
+          text: 'Linux',
+          link: '/linux/basic/',
+          variant: 'primary',
+          icon: 'right-arrow'
+        },
+        {
+          text: 'View site on GitHub',
+          link: 'https://github.com/RelativeSure/personal-starlight-site',
+          icon: 'external',
+          variant: 'minimal',
+          attrs: {
+            rel: 'me'
+          }
+        },
+        {
+          text: 'Contact #WIP',
+          link: '/contact',
+          variant: 'minimal',
+        },
+      ],
+    },
+
+  }}
+
+>
+  <p>This is a custom page with a custom component:</p>
+  <!-- <CustomComponent /> -->
+  <Button>Hello World</Button>
+</StarlightPage>
