@@ -19,7 +19,7 @@ export default defineConfig({
   output: 'server',
   vite: {
     ssr: {
-      external: ['node:buffer', 'node:path', 'node:url'],
+      external: ['node:buffer', 'node:path', 'node:url', 'node:fs'],
     },
   },
   integrations: [
