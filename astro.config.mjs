@@ -6,8 +6,6 @@ import cloudflare from "@astrojs/cloudflare";
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
-import sentry from '@sentry/astro';
-import spotlightjs from '@spotlightjs/astro';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +19,7 @@ export default defineConfig({
   output: 'server',
   vite: {
     ssr: {
-      external: ['node:buffer', 'node:path', 'node:url', 'node:util'],
+      external: ['node:buffer', 'node:path', 'node:url'],
     },
   },
   integrations: [
@@ -82,6 +80,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(), mdx(), react(), sentry(), spotlightjs()
+    sitemap(), mdx(), react()
   ]
 });
