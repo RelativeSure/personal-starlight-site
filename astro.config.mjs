@@ -19,9 +19,9 @@ export default defineConfig({
   output: 'server',
   vite: {
     ssr: {
-      noExternal: true
-    }
-  }
+      noExternal: true,
+    },
+  },
   // vite: {
   //   ssr: {
   //     external: ['node:buffer', 'node:path', 'node:url', 'node:fs'],
