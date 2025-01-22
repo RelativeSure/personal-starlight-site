@@ -30,7 +30,7 @@ This site contains documentation and resources on various topics:
 ### Prerequisites
 
 - Node.js >= 20.0
-- pnpm (Package Manager)
+- bun (Package Manager)
 
 ### Setup
 
