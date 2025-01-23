@@ -26,4 +26,5 @@ pnpm-debug.log*
 megalinter-reports/
 
 bun.lockb
+bun.lock
 .wrangler/
