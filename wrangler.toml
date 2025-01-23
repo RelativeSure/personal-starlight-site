@@ -8,5 +8,5 @@ upload_source_maps = true
 NODE_VERSION = "v22"
 BUN_VERSION = "1.2.0"
 PNPM_VERSION = "10.0.0"
-SKIP_DEPENDENCY_INSTALL=true
-UNSTABLE_PRE_BUILD=asdf plugin add bun && asdf install bun latest && asdf global bun latest && bun i
+SKIP_DEPENDENCY_INSTALL = "true"
+UNSTABLE_PRE_BUILD = "asdf plugin add bun && asdf install bun latest && asdf global bun latest && bun i"
