@@ -33,7 +33,8 @@ reviews:
   auto_review:
     enabled: true
     auto_incremental_review: true
-    ignore_title_keywords: []
+    ignore_title_keywords:
+      - deps # renovate bot
     labels: []
     drafts: false
     base_branches:
