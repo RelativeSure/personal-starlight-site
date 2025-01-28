@@ -1,13 +1,12 @@
 ---
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage';
 import '@/styles/globals.css'
-import { Button } from "@/components/ui/button"
+import { Button, Card, CardGrid, AspectRatio } from "@/components/ui";
 
-title: 'Custom Page'
-description: 'Custom page with shadcn component'
+title: 'Rasmus Broegger Joergensen'
+description: 'Personal website of Rasmus Broegger Joergensen'
 ---
-
-<StarlightPage 
+<StarlightPage
   frontmatter={{
     title: 'Rasmus Broegger Joergensen',
     description: 'Personal website of Rasmus Broegger Joergensen',
@@ -54,6 +53,38 @@ description: 'Custom page with shadcn component'
     },
   }}
 >
-  <p>This is a custom page with a custom component:</p>
+  <p>This is a custom page with Shadcn UI components:</p>
   <Button>Hello World</Button>
+
+  <h2>About Rasmus</h2>
+  <CardGrid stagger>
+    <Card title="Personality" icon="open-book">
+      Rasmus loves to try new hobbies as well as helping people with their issues and frustrations. Rasmus likes to be open and helpful. He was recently diagnosed with ADHD.
+    </Card>
+    <Card title="Education" icon="pencil">
+      Rasmus has a Datatechnician with specialization in infrastructure education. He has received the grade 12(A) for his final exam in November 2021.
+    </Card>
+    <Card title="Interests" icon="setting">
+      Rasmus loves to be challenged and isn't scared to try something new. He wants to learn and expand on technologies. He can be what is called an passionate Open-Source enthusiasts
+    </Card>
+    <Card title="Projects" icon="github">
+      - [GitHub KubeArchitect Organization](https://github.com/KubeArchitect)
+      - [Ansible WSL2 Setup](https://github.com/RelativeSure/ansible-wsl2-playbook)
+      - [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)
+    </Card>
+    <Card title="Experience" icon="seti:db">
+      <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>-
+      **Linux** (RedHat, Debian, Kali, NixOS*) - **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB) - **Containers** (Docker, (On-Prem & Azure) Kubernetes, Rancher) - **Infrastructure as Code** (Ansible*, Terraform, Packer*, Puppet) - **Code** (HTML, PHP, CSS, Bash, Python, Javascript/Typescript*) - **Git** (GitHub, GitLab, Azure DevOps*) - **Networking** (Cisco, Fortinet*) - **Windows Servers** (Active Directory, Group Policy Management, RSAT)
+    </Card>
+  </CardGrid>
+
+  <h2>Projects</h2>
+  <AspectRatio ratio="4/3">
+    <div style="background-color: #f0f8ff; display: flex; align-items: center; justify-content: center;">
+      Project List Placeholder
+    </div>
+  </AspectRatio>
+
+  <h2>Contact</h2>
+  <Button variant="secondary">Contact Rasmus</Button>
 </StarlightPage>
