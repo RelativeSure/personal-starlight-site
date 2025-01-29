@@ -1,11 +1,11 @@
 ---
-import StarlightPage from '@astrojs/starlight/components/StarlightPage';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Card } from '@astrojs/starlight/components';
 import '@/styles/globals.css'
-import { Button, Card, CardGrid, AspectRatio } from "@/components/ui";
-import Aside from '@not-govuk/aside';
-
-title: 'Rasmus Broegger Joergensen'
-description: 'Personal website of Rasmus Broegger Joergensen'
+import { Button } from "@/components/ui/button"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 ---
 <StarlightPage
   frontmatter={{
@@ -74,18 +74,17 @@ description: 'Personal website of Rasmus Broegger Joergensen'
       - [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)
     </Card>
     <Card title="Experience" icon="seti:db">
-      <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>-
-      **Linux** (RedHat, Debian, Kali, NixOS*) - **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB) - **Containers** (Docker, (On-Prem & Azure) Kubernetes, Rancher) - **Infrastructure as Code** (Ansible*, Terraform, Packer*, Puppet) - **Code** (HTML, PHP, CSS, Bash, Python, Javascript/Typescript*) - **Git** (GitHub, GitLab, Azure DevOps*) - **Networking** (Cisco, Fortinet*) - **Windows Servers** (Active Directory, Group Policy Management, RSAT)
+      <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>
+      - **Linux** (RedHat, Debian, Kali, NixOS*) 
+      - **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB) 
+      - **Containers** (Docker, (On-Prem & Azure) Kubernetes, Rancher) 
+      - **Infrastructure as Code** (Ansible*, Terraform, Packer*, Puppet) 
+      - **Code** (HTML, PHP, CSS, Bash, Python, Javascript/Typescript*) 
+      - **Git** (GitHub, GitLab, Azure DevOps*) - **Networking** (Cisco, Fortinet*) 
+      - **Windows Servers** (Active Directory, Group Policy Management, RSAT)
     </Card>
   </CardGrid>
 
-  <h2>Projects</h2>
-  <AspectRatio ratio="4/3">
-    <div style="background-color: #f0f8ff; display: flex; align-items: center; justify-content: center;">
-      Project List Placeholder
-    </div>
-  </AspectRatio>
-
   <h2>Contact</h2>
   <Button variant="secondary">Contact Rasmus</Button>
-</StarlightPage>
+</StarlightPage>0
