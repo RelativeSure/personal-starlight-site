@@ -16,7 +16,7 @@
     "@astrojs/react": "^4.1.6",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/starlight": "0.31.1",
-    "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/tailwind": "^6.0.0",
     "@radix-ui/react-slot": "^1.1.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
