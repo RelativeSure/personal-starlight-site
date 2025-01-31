@@ -2,7 +2,7 @@
 title: Rasmus Brøgger Jørgensen
 template: splash
 hero:
-  tagline: Technical documentation and CV
+  tagline: DevOps Engineer specializing in automation and cloud technologies
   image:
     file: ../../assets/rasmus.png
   actions:
@@ -22,39 +22,61 @@ hero:
         rel: me
 ---
 
-import { Aside, Card, CardGrid } from "@astrojs/starlight/components";
+import { Aside, Card, CardGrid, LinkButton, LinkCard, Icon } from "@astrojs/starlight/components";
 
 ## About Rasmus
 
-<CardGrid stagger>
-  <Card title="Personality" icon="open-book">
-    Rasmus loves to try new hobbies aswell as helping people with their issues
-    and frustrations. Rasmus likes to be open and helpful. He was recently
-    diagnosed with ADHD.
-  </Card>
-  <Card title="Education" icon="pencil">
-    Rasmus has an Datatechnician with specialization in infrastructure
-    education. He has received the grade 12(A) for his final exam in November
-    2021.
-  </Card>
-  <Card title="Interests" icon="setting">
-    Rasmus loves to be challenged and isn't scared to try something new. He
-    wants to learn and expand on technologies. He can be what is called an
-    passionate Open-Source enthusiasts
-  </Card>
-  <Card title="Projects" icon="github">
-    - [GitHub KubeArchitect Organization](https://github.com/KubeArchitect) -
-    [Ansible WSL2 Setup](https://github.com/RelativeSure/ansible-wsl2-playbook)
-    - [Renovate Runner](https://github.com/KubeArchitect/renovate-runner)
+<CardGrid>
+  <Card title="About Me" icon="open-book">
+	Experienced DevOps Engineer with a strong focus on automating infrastructure and streamlining 
+	development workflows. Passionate about implementing efficient CI/CD pipelines and maintaining 
+	robust cloud infrastructure.
+
+	<Aside title="Education">
+	Rasmus has an Datatechnician with specialization in infrastructure
+	education. He has received the grade 12(A) for his final exam in November 2021.
+	</Aside>
+
+	<Aside title="Experience">
+	Netcompany Operations Analyst Jun 2020 - Dec 2021
+	Netcompany Operations Engineer Dec 2021 - Feb 2023
+	Udviklings- og Forenklingsstyrelsen Apr 2023 - Present
+	</Aside>
   </Card>
   <Card title="Experience" icon="seti:db">
-    <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>-
-    **Linux** (RedHat, Debian, Kali, NixOS*) - **Databases** (OracleDB, Redis,
-    PostgreSQL, MySQL/MariaDB) - **Containers** (Docker, (On-Prem & Azure)
-    Kubernetes, Rancher) - **Infrastructure as Code** (Ansible*, Terraform,
-    Packer*, Puppet) - **Code** (HTML, PHP, CSS, Bash, Python,
-    Javascript/Typescript*) - **Git** (GitHub, GitLab, Azure DevOps*) -
-    **Networking** (Cisco, Fortinet*) - **Windows Servers** (Active Directory,
-    Group Policy Management, RSAT)
+    <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>
+	- **Linux** (RedHat, Debian, Kali, NixOS*) 
+	- **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB) 
+	- **Containers** (Docker, On-Prem & Azure Kubernetes, Rancher)
+	- **Infrastructure as Code** (Ansible*, Terraform, Packer, Puppet) 
+	- **Code** (HTML, PHP, CSS, Bash, Python, Javascript/Typescript*) 
+	- **Git** (GitHub, GitLab, Azure DevOps*) 
+	- **Networking** (Cisco, Fortinet*) 
+	- **Windows Servers** (ActiveDirectory, Group Policy Management, RSAT)
   </Card>
+  <LinkCard
+    title="Fedora COPR Repo"
+    href="https://github.com/RelativeSure/autocopr"
+    description="Automatically update versions in spec files used for copr repo."
+  />
+  <LinkCard
+    title="CircleCI Megalinter Orb"
+    href="https://github.com/RelativeSure/circleci-megalinter-orb"
+    description="A CircleCI Megalinter orb to be used to lint files and/or directories."
+  />
+  <LinkCard
+    title="Build GH Actions Images"
+    href="https://github.com/RelativeSure/build-gh-actions-image"
+    description="Docker images to be used in GitHub actions."
+  />
+  <LinkCard
+    title="Ansible WSL2 Setup"
+    href="https://github.com/RelativeSure/ansible-wsl2-playbook"
+    description="Using Ansible to automatically setup your WSL2 distro - no matter what distro."
+  />
+  <LinkCard
+    title="Renovate Runner"
+    href="https://github.com/KubeArchitect/renovate-runner"
+    description="Renovate configuration and GH Actions run for all my repos."
+  />
 </CardGrid>
