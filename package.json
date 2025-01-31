@@ -20,7 +20,7 @@
     "@radix-ui/react-slot": "^1.1.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
-    "astro": "5.2.1",
+    "astro": "5.2.2",
     "astro-icon": "1.1.5",
     "astro-robots-txt": "^1.0.0",
     "class-variance-authority": "^0.7.1",
