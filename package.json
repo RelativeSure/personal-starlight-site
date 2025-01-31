@@ -16,6 +16,7 @@
     "@astrojs/react": "^4.1.6",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/starlight": "0.31.1",
+    "@fontsource/fira-mono": "^5.1.1",
     "@radix-ui/react-slot": "^1.1.1",
     "@tailwindcss/postcss": "^4.0.1",
     "@tailwindcss/vite": "^4.0.1",

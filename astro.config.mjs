@@ -20,6 +20,12 @@ export default defineConfig({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
+      customCss: [
+        // Fontsource files for to regular and semi-bold font weights.
+        "@fontsource/fira-mono/400.css",
+        "@fontsource/fira-mono/500.css",
+        "@fontsource/fira-mono/700.css",
+      ],
       social: {
         github: "https://github.com/RelativeSure",
         mastodon: "https://infosec.exchange/@relativesure",
@@ -71,4 +77,3 @@ export default defineConfig({
     robotsTxt(),
   ],
 });
-
