@@ -4,6 +4,6 @@ orbs:
 workflows:
   run-megalinter:
     jobs:
-      - megalinter/run
+      - megalinter/run:
           resource_class: relativesure/hetzner-ubuntu-kind
 
