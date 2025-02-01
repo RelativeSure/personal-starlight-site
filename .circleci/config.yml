@@ -6,4 +6,5 @@ workflows:
     jobs:
       - megalinter/run:
           resource_class: relativesure/hetzner-ubuntu-kind
+          flavor: javascript
 
