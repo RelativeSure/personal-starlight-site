@@ -7,4 +7,5 @@ workflows:
       - megalinter/run:
           resource_class: relativesure/hetzner-ubuntu-kind
           flavor: javascript
+          github_token: GH_PACKAGES_TOKEN
 
