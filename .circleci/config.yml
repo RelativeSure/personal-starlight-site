@@ -5,4 +5,5 @@ workflows:
   run-megalinter:
     jobs:
       - megalinter/run
+          resource_class: relativesure/hetzner-ubuntu-kind
 
