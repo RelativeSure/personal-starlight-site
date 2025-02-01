@@ -1,73 +1,8 @@
----
-version: 2.1
-
+version: '2.1'
 orbs:
-  megalinter: relativesure/megalinter@1.0.5
-  github-cli: circleci/github-cli@2.6.2
-
-jobs:
-  after-megalinter:
-    docker:
-      - image: cimg/base:stable
-        auth:
-          username: $DOCKER_HUB_USER
-          password: $DOCKER_HUB_PASSWORD
-    steps:
-      - checkout
-      - attach_workspace:
-          at: /tmp/lint
-      - run:
-          name: Check if updated_sources folder exists
-          command: |
-            UPD_FILES=/tmp/lint/megalinter-reports/updated_sources
-            if [ ! -d "$UPD_FILES" ]; then
-              echo "$UPD_FILES does not exist. Stopping job..."
-              circleci-agent step halt
-            fi
-      - run:
-          name: Get the updated sources in megalinter-reports
-          command: |
-            # Set parameter on folder path
-            UPD_FILES=/tmp/lint/megalinter-reports/updated_sources
-            # List the folders and files in updated_sources subfolder in megalinter-reports folder.
-            ITEMS=$(ls -A $UPD_FILES | grep -v '^\.$' | grep -v '^\.\.$')
-            echo "Items in $UPD_FILES: $ITEMS"
-            # Check if there are any items in updated_sources
-            if [ -z "$ITEMS" ]; then
-              echo "No updated sources found"
-              exit 0
-            else
-              echo "Updated sources found. Copying files to the repository"
-              cp -a $UPD_FILES/. .
-            fi
-      - github-cli/setup:
-          token: GH_PACKAGES_TOKEN
-      - run:
-          name: Set up Git bot
-          command: |
-            git config --local user.email "139585163+KubeArchitectBot@users.noreply.github.com"
-            git config --local user.name "KubeArchitectBot"
-      - run:
-          name: Create a new branch and commit the changes to the repository
-          command: |
-            git checkout -b megalinter-fixes-$CIRCLE_BUILD_NUM \
-            && git add . \
-            && git commit -m '[MegaLinter] Apply linters automatic fixes' \
-            && git push --set-upstream origin megalinter-fixes-$CIRCLE_BUILD_NUM
-      - run:
-          name: Create a pull request
-          command: |
-            gh pr create --title "[MegaLinter] Apply linters automatic fixes" --body "This PR applies automatic fixes from MegaLinter" --base master --head megalinter-fixes-$CIRCLE_BUILD_NUM
+  megalinter: relativesure/megalinter@dev:19b71c2636cb68fff089de1a5a4667d266ff5392
 workflows:
   run-megalinter:
     jobs:
-      - megalinter/megalinter:
-          persist_megalinter_reports: true
-          flavor: javascript
-      - after-megalinter:
-          requires:
-            - megalinter/megalinter
-          filters:
-            branches:
-              only:
-                - master
+      - megalinter/run
+
