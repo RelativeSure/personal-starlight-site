@@ -1,6 +1,6 @@
 version: '2.1'
 orbs:
-  megalinter: relativesure/megalinter@dev:19b71c2636cb68fff089de1a5a4667d266ff5392
+  megalinter: relativesure/megalinter@dev:alpha
 workflows:
   run-megalinter:
     jobs:
