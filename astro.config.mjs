@@ -5,7 +5,6 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
-
 import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
@@ -14,6 +13,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  redirects: {
+      "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
+  }
   integrations: [
     starlight({
       plugins: [starlightImageZoom()],
