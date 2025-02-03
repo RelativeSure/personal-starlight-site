@@ -15,7 +15,7 @@ export default defineConfig({
   },
   redirects: {
       "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
-  }
+  },
   integrations: [
     starlight({
       plugins: [starlightImageZoom()],
