@@ -23,16 +23,16 @@ workflows:
           install-pnpm: true
           node-version: 'latest'
       - node/install-packages:
+          name: build2
           override-ci-command: pnpm i
           pkg-manager: pnpm
       - node/run:
+          name: build3
           pnpm-run: build
       - run-lhci:
           context:
             - Main Context
           requires:
             - build1
-            - node/install
-            - node/install-packages
-            - node/run 
-          
+            - build2
+            - build3
