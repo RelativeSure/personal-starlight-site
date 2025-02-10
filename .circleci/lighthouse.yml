@@ -18,21 +18,13 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - node/install:
-          name: build1
-          install-pnpm: true
-          node-version: 'latest'
-      - node/install-packages:
-          name: build2
+      - node/run:
+          name: node-run
+          pnpm-run: build
           override-ci-command: pnpm i
           pkg-manager: pnpm
-      - node/run:
-          name: build3
-          pnpm-run: build
       - run-lhci:
           context:
             - Main Context
           requires:
-            - build1
-            - build2
-            - build3
+            - node-run
