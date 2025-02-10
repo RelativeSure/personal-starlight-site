@@ -6,7 +6,7 @@ orbs:
 workflows:
   run-lighthouse:
     jobs:
-     - lhci
+     - lhci:
         filters:
          branches:
           only:
