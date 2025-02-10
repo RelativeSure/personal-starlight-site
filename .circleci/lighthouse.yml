@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.5.2
+  node: circleci/node@7.1.0
 
 resource_class: relativesure/hetzner-ubuntu-kind
 
@@ -12,14 +13,18 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome
-      - run: pnpm install
-      - run: pnpm run build
+      #- run: pnpm install
+      #- run: pnpm run build
       - run: sudo pnpm install -g @lhci/cli@0.14.x
       - run: lhci autorun
 
 workflows:
   run-lhci:
     jobs:
+      - node/run:
+          executor:
+            name: node/default
+          pnpm-run: build
       - build:
           context:
             - Main Context
