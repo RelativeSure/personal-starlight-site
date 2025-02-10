@@ -17,9 +17,6 @@ jobs:
       - node/install-packages:
           override-ci-command: pnpm i
           pkg-manager: pnpm
-      - node/install-packages:
-          override-ci-command: "pnpm install -g @lhci/cli@0.14.x"
-          pkg-manager: pnpm
       - node/run:
           pnpm-run: build
       #- run: lhci autorun
