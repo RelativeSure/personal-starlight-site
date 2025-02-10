@@ -1,19 +1,15 @@
 version: 2.1
 orbs:
-  lighthouse-check: foo-software/lighthouse-check@0.0.8
-
+  browser-tools: circleci/browser-tools@1.2.3
 jobs:
-  lhci-test:
-    executor: lighthouse-check/default
+  build:
+    docker:
+      - image: cimg/node:16.13-browsers
+    working_directory: ~/your-project
     steps:
-      - lighthouse-check/audit:
-          apiToken: $LIGHTHOUSE_BUILD_TOKEN
-          prCommentAccessToken: $GITHUB_TOKEN
-          prCommentUrl: >-
-            https://api.github.com/repos/relativesure/personal-starlight-site/pulls/${CIRCLE_PULL_REQUEST##*/}/reviews
-          urls: mypagetoken1,mypagetoken2        
-
-workflows:
-  lhci-test:
-    jobs:
-      - lhci-test
+      - checkout
+      - browser-tools/install-chrome
+      - run: npm install
+      - run: npm run build
+      - run: sudo npm install -g @lhci/cli@0.14.x
+      - run: lhci autorun
