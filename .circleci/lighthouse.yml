@@ -35,5 +35,7 @@ workflows:
           context:
             - Main Context
       - run-lhci:
+          requires:
+            - prepare-lhci
           context:
             - Main Context
