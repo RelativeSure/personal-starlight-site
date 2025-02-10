@@ -18,9 +18,6 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      #- prepare-lhci:
-      #    context:
-     #       - Main Context
       - node/install:
           install-pnpm: true
           node-version: 'latest'
