@@ -12,6 +12,7 @@ jobs:
     working_directory: ~/your-project
     steps:
       - checkout
+      - run: sudo pnpm install -g '@lhci/cli@0.14.x'
       - browser-tools/install-chrome
       - run: lhci autorun
 
