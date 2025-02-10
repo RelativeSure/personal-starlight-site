@@ -1,15 +1,19 @@
 version: 2.1
-
 orbs:
-  lighthouse: datacamp/lighthouse@2.2.1
+  lighthouse-check: foo-software/lighthouse-check@0.0.8
+
+jobs:
+  lhci-test:
+    executor: lighthouse-check/default
+    steps:
+      - lighthouse-check/audit:
+          apiToken: $LIGHTHOUSE_BUILD_TOKEN
+          prCommentAccessToken: GITHUB_TOKEN
+          prCommentUrl: >-
+            https://api.github.com/repos/relativesure/personal-starlight-site/pulls/${CIRCLE_PULL_REQUEST##*/}/reviews
+          urls: mypagetoken1,mypagetoken2        
 
 workflows:
-  run-lighthouse:
+  lhci-test:
     jobs:
-     - lighthouse/lhci:
-        context:
-          - Main Context
-        filters:
-         branches:
-          only:
-           - master
+      - test
