@@ -20,4 +20,6 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - build
+      - build:
+          context:
+            - Main Context
