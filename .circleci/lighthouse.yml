@@ -31,11 +31,22 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - prepare-lhci:
-          context:
-            - Main Context
+      #- prepare-lhci:
+      #    context:
+     #       - Main Context
+      - node/install:
+          install-pnpm: true
+          node-version: 'latest'
+      - node/install-packages:
+          override-ci-command: pnpm i
+          pkg-manager: pnpm
+      - node/run:
+          pnpm-run: build
       - run-lhci:
-          requires:
-            - prepare-lhci
           context:
             - Main Context
+          requires:
+            - node/install
+            - node/install-packages
+            - node/run 
+          
