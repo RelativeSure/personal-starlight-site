@@ -29,6 +29,7 @@ export default defineConfig({
         "@fontsource/fira-mono/700.css",
         // Relative path to your custom CSS file
         './src/styles/custom.css',
+        './src/styles/globals.css',
       ],
       social: {
         github: "https://github.com/RelativeSure",
