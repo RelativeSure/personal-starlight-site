@@ -1,15 +1,23 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.2.3
+  browser-tools: circleci/browser-tools@1.5.2
+
+resource_class: relativesure/hetzner-ubuntu-kind
+
 jobs:
   build:
     docker:
-      - image: cimg/node:16.13-browsers
+      - image: cimg/node:current-browsers
     working_directory: ~/your-project
     steps:
       - checkout
       - browser-tools/install-chrome
-      - run: npm install
-      - run: npm run build
-      - run: sudo npm install -g @lhci/cli@0.14.x
+      - run: pnpm install
+      - run: pnpm run build
+      - run: sudo pnpm install -g @lhci/cli@0.14.x
       - run: lhci autorun
+
+workflows:
+  run-lhci:
+    jobs:
+      - build
