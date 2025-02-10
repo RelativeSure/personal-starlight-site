@@ -2,6 +2,7 @@
   "name": "starlight",
   "type": "module",
   "version": "1.0.0",
+  "packageManager": "pnpm@10.2.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -16,6 +17,7 @@
     "@astrojs/react": "^4.1.6",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/starlight": "0.31.1",
+    "@radix-ui/react-aspect-ratio": "^1.1.1",
     "@astrojs/starlight-tailwind": "3.0.0",
     "@fontsource/fira-mono": "^5.1.1",
     "@radix-ui/react-slot": "^1.1.1",
