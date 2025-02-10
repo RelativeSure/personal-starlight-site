@@ -1,19 +1,38 @@
 version: 2.1
 orbs:
-  browser-tools: circleci/browser-tools@1.5.2
-  node: circleci/node@7.1.0
-
-resource_class: relativesure/hetzner-ubuntu-kind
-
+  browser-tools: circleci/browser-tools@1.2.3
 jobs:
-  run-lhci:
+  build:
     docker:
       - image: cimg/node:current-browsers
+    parallelism: 10
     working_directory: ~/your-project
     steps:
       - checkout
-      - run: sudo pnpm install -g '@lhci/cli@0.14.x'
       - browser-tools/install-chrome
+      - restore_cache:
+          name: Restore pnpm Package Cache
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+      - run:
+          name: Install pnpm package manager
+          command: |
+            npm install --global corepack@latest
+            corepack enable
+            corepack prepare pnpm@latest-10 --activate
+            pnpm config set store-dir .pnpm-store
+      - run:
+          name: Install Dependencies
+          command: |
+            pnpm install
+      - save_cache:
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - .pnpm-store
+      #- run: pnpm install
+      - run: pnpm run build
+      - run: sudo pnpm install -g @lhci/cli@0.14.x
       - run: lhci autorun
 
 workflows:
