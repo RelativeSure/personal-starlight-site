@@ -8,7 +8,7 @@ jobs:
     steps:
       - lighthouse-check/audit:
           apiToken: $LIGHTHOUSE_BUILD_TOKEN
-          prCommentAccessToken: GITHUB_TOKEN
+          prCommentAccessToken: $GITHUB_TOKEN
           prCommentUrl: >-
             https://api.github.com/repos/relativesure/personal-starlight-site/pulls/${CIRCLE_PULL_REQUEST##*/}/reviews
           urls: mypagetoken1,mypagetoken2        
