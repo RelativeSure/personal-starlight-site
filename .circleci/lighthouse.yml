@@ -38,6 +38,6 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - run-lhci:
+      - build:
           context:
             - Main Context
