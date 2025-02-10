@@ -38,13 +38,6 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - node/run:
-          name: node-run
-          pnpm-run: build
-          override-ci-command: pnpm i
-          pkg-manager: pnpm
       - run-lhci:
           context:
             - Main Context
-          requires:
-            - node-run
