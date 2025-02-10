@@ -20,10 +20,9 @@ jobs:
       - node/install-packages:
           override-ci-command: pnpm install -g @lhci/cli@0.14.x
           pkg-manager: pnpm
-      - node/install-packages:
+      - node/run:
           pnpm-run: build
-          pkg-manager: pnpm
-      - run: lhci autorun
+      #- run: lhci autorun
   run-lhci:
     docker:
       - image: cimg/node:current-browsers
