@@ -6,5 +6,4 @@ upload_source_maps = true
 
 [vars]
 NODE_VERSION = "v23"
-BUN_VERSION = "1.2.0"
 PNPM_VERSION = "10"
