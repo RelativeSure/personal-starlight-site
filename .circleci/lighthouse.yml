@@ -16,4 +16,4 @@ jobs:
 workflows:
   lhci-test:
     jobs:
-      - test
+      - lhci-test
