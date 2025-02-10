@@ -6,33 +6,38 @@ orbs:
 resource_class: relativesure/hetzner-ubuntu-kind
 
 jobs:
-  run-lhci:
+  prepare-lhci:
     executor: node/default
     working_directory: ~/your-project
     steps:
       - checkout
-      - run: sudo npm install -g npm@latest
+      - node/install:
+          install-pnpm: true
+          node-version: 'latest'
       - node/install-packages:
           override-ci-command: pnpm i
           pkg-manager: pnpm
-      - run: pnpm run build
-      - run: sudo pnpm install -g @lhci/cli@0.14.x
+      - node/install-packages:
+          override-ci-command: pnpm install -g @lhci/cli@0.14.x
+          pkg-manager: pnpm
+      - node/install-packages:
+          pnpm-run: build
+          pkg-manager: pnpm
       - run: lhci autorun
-  build:
+  run-lhci:
     docker:
       - image: cimg/node:current-browsers
     working_directory: ~/your-project
     steps:
-      - checkout
       - browser-tools/install-chrome
-      #- run: pnpm install
-      #- run: pnpm run build
-      - run: sudo pnpm install -g @lhci/cli@0.14.x
       - run: lhci autorun
 
 workflows:
   run-lhci:
     jobs:
+      - prepare-lhci:
+          context:
+            - Main Context
       - run-lhci:
           context:
             - Main Context
