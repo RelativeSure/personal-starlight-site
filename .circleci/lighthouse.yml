@@ -1,0 +1,13 @@
+version: 2.1
+
+orbs:
+  lighthouse: datacamp/lighthouse@2.2.1
+
+workflows:
+  run-lighthouse:
+    jobs:
+     - lhci
+        filters:
+         branches:
+          only:
+           - main
