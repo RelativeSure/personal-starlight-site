@@ -25,7 +25,7 @@
     "@tailwindcss/vite": "^4.0.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
-    "astro": "5.2.6",
+    "astro": "5.3.0",
     "astro-icon": "1.1.5",
     "astro-robots-txt": "^1.0.0",
     "class-variance-authority": "^0.7.1",
