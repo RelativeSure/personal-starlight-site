@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome
-      - run: sudo npm i -g pnpm
+      - run: npm i -g pnpm
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
@@ -24,8 +24,8 @@ jobs:
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - .pnpm-store
+      - run: pnpm install -g @lhci/cli@0.14.0
       - run: pnpm run build
-      - run: sudo pnpm install -g @lhci/cli@0.14.x
       - run: lhci autorun
 
 workflows:
