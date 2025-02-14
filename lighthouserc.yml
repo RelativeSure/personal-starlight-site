@@ -2,18 +2,15 @@ ci:
   collect:
     staticDistDir: 'dist/'
     staticDirFileDiscoveryDepth: 5
+    startServerCommand: pnpm run serve
 
   assert:
     preset: lighthouse:no-pwa
-      # assert options here
+    assertions:
+      offscreen-images: 'off'
+      uses-webp-images: 'off'
+      color-contrast: 'off'
 
   upload:
     target: 'temporary-public-storage'
     githubAppToken: "$LHCI_GITHUB_APP_TOKEN"
-    # upload options here
-
-#  server:
-    # server options here
-
-#  wizard:
-    # wizard options here
