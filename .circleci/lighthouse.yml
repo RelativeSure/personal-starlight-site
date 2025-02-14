@@ -10,8 +10,11 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome
-      #- run: npm i -g pnpm
-      - run: wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
+      - run:
+          name: Install pnpm package manager
+          command: |
+            sudo npm install -g pnpm@latest-10
+          shell: /bin/bash -eo pipefail
       - run: cat /home/circleci/.bashrc && source /home/circleci/.bashrc
       - restore_cache:
           name: Restore pnpm Package Cache
