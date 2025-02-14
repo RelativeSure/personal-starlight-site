@@ -26,7 +26,7 @@ jobs:
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - .pnpm-store
-      - run: pnpm install -g @lhci/cli@0.14.0
+      - run: env && pnpm install -g @lhci/cli@0.14.0
       - run: pnpm run build
       - run: lhci autorun
 
