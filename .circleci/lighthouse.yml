@@ -12,7 +12,7 @@ jobs:
       - browser-tools/install-chrome
       #- run: npm i -g pnpm
       - run: wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
-      - run: cat /home/circeci/.bashrc && source /home/circleci/.bashrc
+      - run: cat /home/circleci/.bashrc && source /home/circleci/.bashrc
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
