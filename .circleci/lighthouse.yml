@@ -12,7 +12,7 @@ jobs:
       - browser-tools/install-chrome
       #- run: npm i -g pnpm
       - run: wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
-      - run: source /home/circleci/.bashrc
+      - run: cat /home/circeci/.bashrc && source /home/circleci/.bashrc
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
@@ -26,7 +26,7 @@ jobs:
           key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - .pnpm-store
-      - run: env && pnpm install -g @lhci/cli@0.14.0
+      - run: cat /home/circleci/.bashrc && source /home/circleci/.bashrc && env && pnpm install -g @lhci/cli@0.14.0
       - run: pnpm run build
       - run: lhci autorun
 
