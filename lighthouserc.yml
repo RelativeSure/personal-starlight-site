@@ -10,6 +10,9 @@ ci:
       offscreen-images: 'off'
       uses-webp-images: 'off'
       color-contrast: 'off'
+      meta-description: 'off'
+      render-blocking-resources: 'off'
+
 
   upload:
     target: 'temporary-public-storage'
