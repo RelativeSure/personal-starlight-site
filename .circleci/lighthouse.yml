@@ -10,7 +10,8 @@ jobs:
     steps:
       - checkout
       - browser-tools/install-chrome
-      - run: npm i -g pnpm
+      #- run: npm i -g pnpm
+      - run: wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.bashrc" SHELL="$(which bash)" bash -
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
