@@ -2,7 +2,7 @@ ci:
   collect:
     staticDistDir: 'dist/'
     staticDirFileDiscoveryDepth: 5
-    startServerCommand: pnpm run serve
+    startServerCommand: pnpm run preview
 
   assert:
     preset: lighthouse:no-pwa
