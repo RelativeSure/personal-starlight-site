@@ -1,0 +1,18 @@
+ci:
+  collect:
+    staticDistDir: 'dist/'
+    staticDirFileDiscoveryDepth: 5
+
+  assert:
+    preset: lighthouse:no-pwa
+      # assert options here
+
+  upload:
+    target: 'temporary-public-storage'
+    # upload options here
+
+#  server:
+    # server options here
+
+#  wizard:
+    # wizard options here
