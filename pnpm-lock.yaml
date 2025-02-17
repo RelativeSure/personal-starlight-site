@@ -72,8 +72,8 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5
       starlight-image-zoom:
-        specifier: 0.10.1
-        version: 0.10.1(@astrojs/starlight@0.32.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.7)(typescript@5.7.3)(yaml@2.7.0)))
+        specifier: 0.11.0
+        version: 0.11.0(@astrojs/starlight@0.32.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.7)(typescript@5.7.3)(yaml@2.7.0)))
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.0.1
@@ -3429,11 +3429,11 @@ packages:
   stacktracey@2.1.8:
     resolution: {integrity: sha512-Kpij9riA+UNg7TnphqjH7/CzctQ/owJGNbFkfEeve4Z4uxT5+JapVLFXcsurIfN34gnTWZNJ/f7NMG0E8JDzTw==}
 
-  starlight-image-zoom@0.10.1:
-    resolution: {integrity: sha512-1uEwijShhFFcYA++lDmFV32WmZkpp/VMvD4+PC5h+7InnyPGMiT+mSVJzbddNEit44OxM5kxbO6/OqcBtjKpOA==}
+  starlight-image-zoom@0.11.0:
+    resolution: {integrity: sha512-wXW5xDIxoMpVIifuTmLAvooq2YgI0WbLcljySssvd7GrvaJSGHxb1Wd8IsQEwVZOHIxlt1PLdZJNnuttbSzYMw==}
     engines: {node: '>=18'}
     peerDependencies:
-      '@astrojs/starlight': '>=0.30.0'
+      '@astrojs/starlight': '>=0.32.0'
 
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
@@ -8209,7 +8209,7 @@ snapshots:
       as-table: 1.0.55
       get-source: 2.0.12
 
-  starlight-image-zoom@0.10.1(@astrojs/starlight@0.32.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.7)(typescript@5.7.3)(yaml@2.7.0))):
+  starlight-image-zoom@0.11.0(@astrojs/starlight@0.32.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.7)(typescript@5.7.3)(yaml@2.7.0))):
     dependencies:
       '@astrojs/starlight': 0.32.0(astro@5.3.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.7)(typescript@5.7.3)(yaml@2.7.0))
       rehype-raw: 7.0.0
