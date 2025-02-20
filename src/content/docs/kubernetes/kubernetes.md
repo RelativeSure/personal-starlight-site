@@ -6,6 +6,7 @@ keywords:
   - FAQ
   - Containers
 # image: <insert image here>
+draft: true
 ---
 
 ## Kubectl
