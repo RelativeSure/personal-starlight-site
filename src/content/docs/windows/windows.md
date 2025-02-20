@@ -8,6 +8,7 @@ keywords:
   - Operating
   - Operating System
 # image: <insert image here>
+draft: true
 ---
 
 Insert Windows stuff
