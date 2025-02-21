@@ -22,6 +22,12 @@ export default defineConfig({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
+      logo: {
+        src: './src/assets/favicon.svg',
+      },
+      expressiveCode: {
+        themes: ['material-theme-ocean', 'material-theme-lighter'],
+      },
       customCss: [
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/fira-mono/400.css",
@@ -39,39 +45,46 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "IT Security",
+          label: "Bookmarks",
+          collapsed: true,
           autogenerate: {
-            directory: "it-security",
+            directory: "bookmarks",
           },
         },
-        {
-          label: "Kubernetes",
-          autogenerate: {
-            directory: "kubernetes",
-          },
-        },
+        // {
+        //   label: "IT Security",
+        //   autogenerate: {
+        //     directory: "it-security",
+        //   },
+        // },
+        // {
+        //   label: "Kubernetes",
+        //   autogenerate: {
+        //     directory: "kubernetes",
+        //   },
+        // },
         {
           label: "Linux",
           autogenerate: {
             directory: "linux",
           },
         },
-        {
-          label: "Windows",
-          autogenerate: {
-            directory: "windows",
-          },
-        },
-        {
-          label: "Bookmarks",
-          autogenerate: {
-            directory: "bookmarks",
-          },
-        },
+        // {
+        //   label: "Windows",
+        //   autogenerate: {
+        //     directory: "windows",
+        //   },
+        // },
         {
           label: "Projects",
           autogenerate: {
             directory: "projects",
+          },
+        },
+        {
+          label: "Website",
+          autogenerate: {
+            directory: "website",
           },
         },
       ],
