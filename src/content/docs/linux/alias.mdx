@@ -5,13 +5,6 @@ sidebar:
   badge: new
 ---
 
-import { Code } from '@astrojs/starlight/components';
-# import importedCode from '/tsconfig.json?raw';
+import { Code } from '@astrojs/starlight/components'
 
-export const llCode = `alias ll="ls -l"`;
-
-## Requirements
-
-- Git delta
-
-<Code code={llCode} title="ll" lang="bash" />
+<Code code="console.log('Hello world!')" lang="js" />
