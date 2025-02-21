@@ -43,6 +43,7 @@ export default defineConfig({
       sidebar: [
         {
           label: "Bookmarks",
+          collapsed: true,
           autogenerate: {
             directory: "bookmarks",
           },
