@@ -25,6 +25,9 @@ export default defineConfig({
       logo: {
         src: './src/assets/favicon.svg',
       },
+      expressiveCode: {
+        themes: ['material-theme-ocean', 'material-theme-lighter'],
+      },
       customCss: [
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/fira-mono/400.css",
@@ -76,6 +79,12 @@ export default defineConfig({
           label: "Projects",
           autogenerate: {
             directory: "projects",
+          },
+        },
+        {
+          label: "Website",
+          autogenerate: {
+            directory: "website",
           },
         },
       ],

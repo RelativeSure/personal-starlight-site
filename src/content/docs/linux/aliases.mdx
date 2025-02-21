@@ -6,5 +6,16 @@ sidebar:
 ---
 
 import { Code } from '@astrojs/starlight/components'
+import gitConfig from '/src/assets/linux/gitconfig?raw';
 
-<Code code="alias ll='ls -l'" lang="shell" title="ll" />
+## Common
+
+<Code code="alias ll='ls -l'" lang="shell" frame="none" meta="showLineNumbers=false" />
+
+### Git
+
+<Code code={gitConfig} lang="shell" title=".gitconfig" frame="code" />
+
+## Bash
+
+## Fish
