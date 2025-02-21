@@ -8,8 +8,10 @@ sidebar:
 import { Code } from '@astrojs/starlight/components';
 # import importedCode from '/tsconfig.json?raw';
 
+export const llCode = `alias ll='ls -l'`
+
 ## Requirements
 
 - Git delta
 
-<Code code="alias ll='ls -l'" lang="bash" />
+<Code code={llCode} title="ll" lang="bash" />
