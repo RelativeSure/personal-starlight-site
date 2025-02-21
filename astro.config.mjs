@@ -22,7 +22,6 @@ export default defineConfig({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
-      favicon: './src/assets/favicon.svg',
       logo: {
         src: './src/assets/favicon.svg',
       },
