@@ -5,7 +5,6 @@ jobs:
   build:
     docker:
       - image: cimg/node:23.7.0
-    parallelism: 10
     working_directory: ~/your-project
     steps:
       - checkout
