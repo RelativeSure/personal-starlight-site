@@ -2,19 +2,13 @@ version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.5.2
 jobs:
-  build:
+  lighthouse:
     docker:
-      - image: cimg/node:23.7.0
+      - image: skybirddk/circleci-pnpm:latest
     working_directory: ~/your-project
     steps:
       - checkout
       - browser-tools/install-chrome
-      - run:
-          name: Install pnpm package manager
-          command: |
-            sudo npm install -g pnpm@latest-10
-          shell: /bin/bash -eo pipefail
-      - run: cat /home/circleci/.bashrc && source /home/circleci/.bashrc
       - restore_cache:
           name: Restore pnpm Package Cache
           keys:
@@ -34,6 +28,5 @@ jobs:
 workflows:
   run-lhci:
     jobs:
-      - build:
-          context:
-            - Main Context
+      - lighthouse:
+          context: Main Context
