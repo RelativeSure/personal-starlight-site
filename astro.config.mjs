@@ -51,12 +51,12 @@ export default defineConfig({
             directory: "bookmarks",
           },
         },
-        // {
-        //   label: "IT Security",
-        //   autogenerate: {
-        //     directory: "it-security",
-        //   },
-        // },
+        {
+          label: "Good Stuff",
+          autogenerate: {
+            directory: "goodstuff",
+          },
+        },
         // {
         //   label: "Kubernetes",
         //   autogenerate: {
