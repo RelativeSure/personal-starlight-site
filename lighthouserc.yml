@@ -5,9 +5,9 @@ ci:
     startServerCommand: pnpm run preview
 
   assert:
-    preset: lighthouse:no-pwa
+    preset: 'lighthouse:recommended'
     assertions:
-      offscreen-images: 'off'
+      offscreen-images: 'warn'
       uses-webp-images: 'off'
       color-contrast: 'off'
       meta-description: 'off'
