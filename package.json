@@ -2,7 +2,7 @@
   "name": "starlight",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.5.0",
+  "packageManager": "pnpm@10.5.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
