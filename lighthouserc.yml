@@ -6,7 +6,7 @@ ci:
     url:
       http://localhost:3000/,
       http://localhost:3000/goodstuff/,
-      "http://localhost:3000/projects/,
+      http://localhost:3000/projects/,
     settings:
       chromeFlags: '--disable-gpu --no-sandbox'
   assert:
