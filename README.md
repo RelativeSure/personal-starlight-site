@@ -24,28 +24,29 @@ This site contains documentation and resources on various topics:
 - [React](https://reactjs.org) - UI Components
 - [TypeScript](https://www.typescriptlang.org) - Type Safety
 - [MDX](https://mdxjs.com) - Enhanced Markdown
+- [Cloudflare Pages](https://pages.cloudflare.com) - Hosting
 
 ## 🛠️ Development
 
 ### Prerequisites
 
-- Node.js >= 20.0
-- bun (Package Manager)
+- Node.js >= 23.0
+- pnpm (Package Manager)
 
 ### Setup
 
 1. Clone the repository
 2. Install dependencies:
    ```bash
-   bun install
+   pnpm install
    ```
 
 ### Available Commands
 
-- `bun dev` - Start development server
-- `bun build` - Build the site
-- `bun preview` - Preview the built site
-- `bun check` - Run type checking
+- `pnpm dev` - Start development server
+- `pnpm build` - Build the site
+- `pnpm preview` - Preview the built site
+- `pnpm check` - Run type checking
 
 ## 📦 Project Structure
 
