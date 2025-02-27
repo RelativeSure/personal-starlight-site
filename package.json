@@ -47,7 +47,7 @@
   "devDependencies": {
     "@cloudflare/workerd-linux-64": "1.20250224.0",
     "@lhci/cli": "0.14.0",
-    "wrangler": "3.110.0"
+    "wrangler": "3.111.0"
   },
   "pnpm": {
     "ignoredBuiltDependencies": [
