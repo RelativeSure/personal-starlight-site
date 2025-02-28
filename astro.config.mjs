@@ -7,6 +7,7 @@ import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import robotsTxt from "astro-robots-txt";
 import { ion } from "starlight-ion-theme";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -93,6 +94,7 @@ export default defineConfig({
         },
       ],
     }),
+    icon(),
     sitemap(),
     mdx(),
     react(),
