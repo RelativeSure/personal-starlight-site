@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
 import robotsTxt from "astro-robots-txt";
+import { ion } from "starlight-ion-theme";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,7 +19,10 @@ export default defineConfig({
   },
   integrations: [
     starlight({
-      plugins: [starlightImageZoom()],
+      plugins: [
+        starlightImageZoom(),
+        ion()
+      ],
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
