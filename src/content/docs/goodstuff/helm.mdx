@@ -1,0 +1,20 @@
+---
+title: Helm
+description: Good Stuff for Helm
+sidebar:
+  badge: new
+---
+
+import { Code } from '@astrojs/starlight/components';
+
+## Plugins
+
+https://github.com/jkroepke/helm-secrets
+
+## Examples
+
+<Code code="helm get values <helm name> --namespace <namespace>" title="Get values for helm chart" lang="shell" frame="code" />
+
+<Code code="helm lint --strict" title="lint helm files" lang="shell" frame="code" />
+
+<Code code="helm install --dry-run --debug" title="Dry run of an install of helm chart" lang="shell" frame="code" />
