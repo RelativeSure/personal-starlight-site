@@ -16,8 +16,10 @@ export default defineConfig({
     imageService: 'passthrough',
     routes: {
       extend: {
-        include: [{ pattern: '/static' }], // Route a prerended page to the SSR function for on-demand rendering
-        include: [{ pattern: '/dist' }], // Route a prerended page to the SSR function for on-demand rendering
+        include: [
+          { pattern: '/static' }, // Route a prerended page to the SSR function for on-demand rendering
+          { pattern: '/dist' }    // Route a prerended page to the SSR function for on-demand rendering
+        ],
         exclude: [{ pattern: '/pagefind/*' }], // Use Starlight's pagefind search, which is generated statically at build time
       }
     },
