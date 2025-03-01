@@ -26,7 +26,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     ssr: {
-      external: ['node:path', 'node:url'],
+      external: ['node:path', 'node:url', 'node:stream'],
     },
   },
   redirects: {
