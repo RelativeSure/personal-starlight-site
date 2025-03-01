@@ -13,6 +13,7 @@ export default defineConfig({
   site: "https://rasmusj.dk",
   output: 'server',
   adapter: cloudflare({
+    imageService: 'passthrough',
     routes: {
       extend: {
         include: [{ pattern: '/static' }], // Route a prerended page to the SSR function for on-demand rendering
