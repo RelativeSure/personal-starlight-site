@@ -29,3 +29,4 @@ bun.lockb
 bun.lock
 .wrangler/
 .jj
+src/assets/*.webp
