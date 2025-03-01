@@ -10,20 +10,24 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "serve:lhci": "pnpm run preview"
+    "serve:lhci": "pnpm run preview",
+    "cfpreview": "wrangler pages dev ./dist",
+    "cfdeploy": "wrangler pages deploy ./dist"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
+    "@astrojs/cloudflare": "^12.2.3",
     "@astrojs/mdx": "4.1.0",
-    "@astrojs/react": "^4.1.6",
+    "@astrojs/react": "^4.2.1",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/starlight": "0.32.2",
+    "@astrojs/starlight-tailwind": "^3.0.0",
     "@expressive-code/plugin-line-numbers": "^0.40.2",
     "@fontsource/fira-mono": "^5.1.1",
     "@radix-ui/react-aspect-ratio": "^1.1.1",
     "@radix-ui/react-slot": "^1.1.1",
     "@tailwindcss/postcss": "^4.0.1",
-    "@tailwindcss/vite": "^4.0.1",
+    "@tailwindcss/vite": "^4.0.9",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "astro": "5.4.1",
@@ -35,10 +39,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5",
-    "starlight-image-zoom": "0.11.1",
-    "starlight-ion-theme": "2.2.2",
     "tailwind-merge": "^3.0.0",
-    "tailwindcss": "^4.0.1",
+    "tailwindcss": "^4.0.9",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.8.2"
   },
@@ -48,8 +50,9 @@
   "devDependencies": {
     "@cloudflare/workerd-linux-64": "1.20250224.0",
     "@lhci/cli": "0.14.0",
-    "wrangler": "3.111.0",
-    "depcheck": "1.4.7"
+    "depcheck": "1.4.7",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "wrangler": "3.111.0"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
