@@ -28,3 +28,4 @@ megalinter-reports/
 bun.lockb
 bun.lock
 .wrangler/
+.jj
