@@ -28,6 +28,11 @@ export default defineConfig({
     ssr: {
       external: ['node:path', 'node:url', 'node:stream'],
     },
+    resolve: {
+      alias: import.meta.env.PROD && {
+        "react-dom/server": "react-dom/server.edge",
+      },
+    },
   },
   redirects: {
       "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
