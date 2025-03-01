@@ -103,7 +103,7 @@ importers:
         specifier: 1.4.7
         version: 1.4.7
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 5.14.0
         version: 5.14.0(rollup@4.34.9)
       wrangler:
         specifier: 3.111.0
