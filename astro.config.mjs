@@ -11,7 +11,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
-  output: 'server',
+  /*output: 'server',
   adapter: cloudflare({
     routes: {
       extend: {
@@ -22,17 +22,17 @@ export default defineConfig({
         exclude: [{ pattern: '/pagefind/*' }], // Use Starlight's pagefind search, which is generated statically at build time
       }
     },
-  }),
+  }),*/
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
+    /*ssr: {
       external: ['node:path', 'node:url', 'node:stream'],
     },
     resolve: {
       alias: import.meta.env.PROD && {
         "react-dom/server": "react-dom/server.edge",
       },
-    },
+    },*/
   },
   redirects: {
       "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
