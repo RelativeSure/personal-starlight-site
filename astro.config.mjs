@@ -58,7 +58,7 @@ export default defineConfig({
         './src/tailwind.css',
         // Relative path to your custom CSS file
         './src/styles/custom.css',
-        './src/styles/global.css',
+        // './src/styles/global.css',
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/fira-mono/400.css",
         "@fontsource/fira-mono/500.css",
