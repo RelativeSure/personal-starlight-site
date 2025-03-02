@@ -39,6 +39,9 @@ export default defineConfig({
   redirects: {
       "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
   },
+  build: {
+    assetsPrefix: 'https://cdn.rasmusj.dk'
+  },
   integrations: [
     starlight({
       title: "Rasmus Brøgger Jørgensen",
