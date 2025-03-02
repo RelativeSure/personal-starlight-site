@@ -23,7 +23,6 @@ export default defineConfig({
       }
     },
   }),
-  prerender: false,
   vite: {
     plugins: [tailwindcss()],
     ssr: {
