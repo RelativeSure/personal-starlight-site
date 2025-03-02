@@ -13,7 +13,6 @@ export default defineConfig({
   site: "https://rasmusj.dk",
   output: 'server',
   adapter: cloudflare({
-    imageService: 'passthrough',
     routes: {
       extend: {
         include: [
