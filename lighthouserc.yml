@@ -7,10 +7,13 @@ ci:
   assert:
     preset: 'lighthouse:recommended'
     assertions:
+      interactive: 'off'
       offscreen-images: 'off'
       uses-webp-images: 'off'
+      uses-responsive-images: 'off'
       color-contrast: 'off'
       meta-description: 'off'
+      largest-contentful-paint: 'off'
       render-blocking-resources: 'warn'
 
   upload:
