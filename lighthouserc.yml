@@ -7,11 +7,11 @@ ci:
   assert:
     preset: 'lighthouse:recommended'
     assertions:
-      offscreen-images: 'warn'
+      offscreen-images: 'off'
       uses-webp-images: 'off'
       color-contrast: 'off'
       meta-description: 'off'
-      render-blocking-resources: 'off'
+      render-blocking-resources: 'warn'
 
   upload:
     target: 'temporary-public-storage'
