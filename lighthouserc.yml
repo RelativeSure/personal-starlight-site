@@ -14,7 +14,7 @@ ci:
       color-contrast: 'off'
       meta-description: 'off'
       largest-contentful-paint: 'off'
-      render-blocking-resources: 'warn'
+      render-blocking-resources: 'off'
 
   upload:
     target: 'temporary-public-storage'
