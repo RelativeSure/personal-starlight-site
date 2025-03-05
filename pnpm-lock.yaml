@@ -80,6 +80,9 @@ importers:
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
+      starlight-package-managers:
+        specifier: ^0.10.0
+        version: 0.10.0(@astrojs/starlight@0.32.2(astro@5.4.2(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(typescript@5.8.2)(yaml@2.7.0)))
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.0.2
@@ -315,7 +318,6 @@ packages:
   '@cloudflare/workerd-linux-64@1.20250303.0':
     resolution: {integrity: sha512-GhDCddqpzyg9w1pbknOUWe2oNMh1SeVIrh4XsHXTWgZKnaP9wN87qWuleeauGkTTEQdqpt5YtShKPCYD2D6WlQ==}
     engines: {node: '>=16'}
-    cpu: [x64]
     os: [linux]
 
   '@cloudflare/workerd-linux-arm64@1.20250214.0':
@@ -3693,6 +3695,12 @@ packages:
 
   stacktracey@2.1.8:
     resolution: {integrity: sha512-Kpij9riA+UNg7TnphqjH7/CzctQ/owJGNbFkfEeve4Z4uxT5+JapVLFXcsurIfN34gnTWZNJ/f7NMG0E8JDzTw==}
+
+  starlight-package-managers@0.10.0:
+    resolution: {integrity: sha512-ndliTHXzaCIQ2FFnq5KIH5Uhs9FCACeS3XQMtx/35aSPXzeGsoGxBNreC1zBif4yzGZRCJN3kXBqjUO82WDtcA==}
+    engines: {node: '>=18.17.1'}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.22.0'
 
   statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
@@ -8805,6 +8813,10 @@ snapshots:
     dependencies:
       as-table: 1.0.55
       get-source: 2.0.12
+
+  starlight-package-managers@0.10.0(@astrojs/starlight@0.32.2(astro@5.4.2(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(typescript@5.8.2)(yaml@2.7.0))):
+    dependencies:
+      '@astrojs/starlight': 0.32.2(astro@5.4.2(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.9)(typescript@5.8.2)(yaml@2.7.0))
 
   statuses@2.0.1: {}
 
