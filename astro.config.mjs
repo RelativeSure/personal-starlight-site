@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
@@ -11,24 +10,23 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
-  output: 'server',
+  output: "server",
   adapter: cloudflare({
-    imageService: 'passthrough',
+    imageService: "passthrough",
     routes: {
       extend: {
         include: [
-          { pattern: '/static' }, // Route a prerended page to the SSR function for on-demand rendering
-          { pattern: '/dist' }    // Route a prerended page to the SSR function for on-demand rendering
+          { pattern: "/dist" }, // Route a prerended page to the SSR function for on-demand rendering
         ],
-        exclude: [{ pattern: '/pagefind/*' }], // Use Starlight's pagefind search, which is generated statically at build time
-      }
+        exclude: [{ pattern: "/pagefind/*" }], // Use Starlight's pagefind search, which is generated statically at build time
+      },
     },
   }),
   prerender: false,
   vite: {
     plugins: [tailwindcss()],
     ssr: {
-      external: ['node:path', 'node:url', 'node:stream'],
+      external: ["node:path", "node:url", "node:stream"],
     },
     resolve: {
       alias: import.meta.env.PROD && {
@@ -37,28 +35,30 @@ export default defineConfig({
     },
   },
   redirects: {
-      "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/"
+    "/linkedin": "https://www.linkedin.com/in/rasmusbroeggerjoergensen/",
   },
   integrations: [
     starlight({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
+      disable404Route: true,
       logo: {
-        src: './src/assets/favicon.svg',
+        src: "./src/assets/favicon.svg",
       },
       editLink: {
-        baseUrl: 'https://github.com/RelativeSure/personal-starlight-site/edit/main/',
+        baseUrl:
+          "https://github.com/RelativeSure/personal-starlight-site/edit/main/",
       },
       expressiveCode: {
-        themes: ['material-theme-ocean', 'material-theme-lighter'],
+        themes: ["material-theme-ocean", "material-theme-lighter"],
       },
       customCss: [
         // Path to your Tailwind base styles:
-        './src/tailwind.css',
+        "./src/tailwind.css",
         // Relative path to your custom CSS file
-        './src/styles/custom.css',
-        './src/styles/global.css',
+        "./src/styles/custom.css",
+        "./src/styles/global.css",
         // Fontsource files for to regular and semi-bold font weights.
         "@fontsource/fira-mono/400.css",
         "@fontsource/fira-mono/500.css",
@@ -105,7 +105,6 @@ export default defineConfig({
       ],
     }),
     icon(),
-    sitemap(),
     mdx(),
     react(),
     robotsTxt(),

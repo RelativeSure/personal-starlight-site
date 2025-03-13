@@ -9,11 +9,6 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    // "plugins": [
-    //   {
-    //     "name": "@astrojs/ts-plugin"
-    //   }
-    // ],
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }
