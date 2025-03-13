@@ -1,5 +1,4 @@
 import { defineCollection } from "astro:content";
-// import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 
