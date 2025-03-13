@@ -22,11 +22,18 @@ import { Steps } from '@astrojs/starlight/components';
 
     https://expressive-code.com/plugins/line-numbers/
 
-3. Add `meta="showLineNumbers=false"` to the `<Code>` block.
+3. Add `meta="showLineNumbers=false"` to the `<Code>` block or the markdown code block.
 
-    ```mdx
+    ```mdx showLineNumbers=false
     <Code code="add code here" lang="shell" meta="showLineNumbers=false" />
     ```
+
+    ````mdx showLineNumbers=false
+    ```mdx showLineNumbers=false
+    alternative way
+    ```
+    ````
+
 
 4. Line numbers will **not** be shown on the code block.
 

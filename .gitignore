@@ -2,10 +2,13 @@
 dist/
 # generated types
 .astro/
+megalinter-reports/
+.vscode/
+.wrangler/
+.jj/
 
 # dependencies
 node_modules/
-#pnpm-lock.yaml
 
 # logs
 npm-debug.log*
@@ -19,14 +22,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-.vscode/
-.vercel
-
-megalinter-reports/
-
-bun.lockb
-bun.lock
-.wrangler/
-.jj
-src/assets/*.webp

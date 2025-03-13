@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import tailwindcss from "@tailwindcss/vite";
@@ -44,6 +43,7 @@ export default defineConfig({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
+      disable404Route: true,
       logo: {
         src: './src/assets/favicon.svg',
       },
@@ -105,7 +105,6 @@ export default defineConfig({
       ],
     }),
     icon(),
-    sitemap(),
     mdx(),
     react(),
     robotsTxt(),
