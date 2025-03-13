@@ -17,6 +17,7 @@ export default defineConfig({
       extend: {
         include: [
           { pattern: "/dist" }, // Route a prerended page to the SSR function for on-demand rendering
+          { pattern: "/static" }, // Route a prerended page to the SSR function for on-demand rendering
         ],
         exclude: [{ pattern: "/pagefind/*" }], // Use Starlight's pagefind search, which is generated statically at build time
       },
@@ -42,7 +43,6 @@ export default defineConfig({
       title: "Rasmus Brøgger Jørgensen",
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
       lastUpdated: true,
-      disable404Route: true,
       logo: {
         src: "./src/assets/favicon.svg",
       },
