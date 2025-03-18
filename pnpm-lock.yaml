@@ -94,8 +94,8 @@ importers:
         version: 5.8.2
     devDependencies:
       '@cloudflare/workerd-linux-64':
-        specifier: 1.20250313.0
-        version: 1.20250313.0
+        specifier: 1.20250317.0
+        version: 1.20250317.0
       '@lhci/cli':
         specifier: 0.14.0
         version: 0.14.0
@@ -325,8 +325,8 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@cloudflare/workerd-linux-64@1.20250313.0':
-    resolution: {integrity: sha512-MMN5u+l+W+IN07263+fgDPmOaJmbWg2KUDvaEa1rawadlACFxpkzApD8o5zl1XRFBmZnQnfjoTGDvE+jBqNXpg==}
+  '@cloudflare/workerd-linux-64@1.20250317.0':
+    resolution: {integrity: sha512-KfAHN9VHF2NxGjDjj7udLAatZ72GIg4xmN9r2AZ6N1/hsGDlbn+NbVkSJtWjpXBcCoWYxQqtAdpHyO4eb7nIvQ==}
     engines: {node: '>=16'}
     cpu: [x64]
     os: [linux]
@@ -4933,7 +4933,7 @@ snapshots:
   '@cloudflare/workerd-linux-64@1.20250310.0':
     optional: true
 
-  '@cloudflare/workerd-linux-64@1.20250313.0': {}
+  '@cloudflare/workerd-linux-64@1.20250317.0': {}
 
   '@cloudflare/workerd-linux-arm64@1.20250310.0':
     optional: true
