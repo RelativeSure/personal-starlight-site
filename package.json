@@ -19,7 +19,7 @@
     "@astrojs/cloudflare": "^12.2.3",
     "@astrojs/mdx": "4.2.0",
     "@astrojs/react": "^4.2.1",
-    "@astrojs/starlight": "0.32.2",
+    "@astrojs/starlight": "0.32.3",
     "@astrojs/starlight-tailwind": "^3.0.0",
     "@expressive-code/plugin-line-numbers": "^0.40.2",
     "@fontsource/fira-mono": "^5.1.1",
