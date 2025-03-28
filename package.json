@@ -52,7 +52,7 @@
     "@lhci/cli": "0.14.0",
     "depcheck": "1.4.7",
     "rollup-plugin-visualizer": "5.14.0",
-    "wrangler": "4.5.0"
+    "wrangler": "4.5.1"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
