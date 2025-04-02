@@ -48,7 +48,7 @@
     "node": ">=23.0"
   },
   "devDependencies": {
-    "@cloudflare/workerd-linux-64": "1.20250327.0",
+    "@cloudflare/workerd-linux-64": "1.20250401.0",
     "@lhci/cli": "0.14.0",
     "depcheck": "1.4.7",
     "rollup-plugin-visualizer": "5.14.0",
