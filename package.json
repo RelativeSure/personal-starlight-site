@@ -3,6 +3,9 @@
   "type": "module",
   "version": "1.0.0",
   "packageManager": "pnpm@10.7.1",
+  "engines": {
+    "node": ">=23.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -44,21 +47,11 @@
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.8.3"
   },
-  "engines": {
-    "node": ">=23.0"
-  },
   "devDependencies": {
     "@cloudflare/workerd-linux-64": "1.20250405.0",
     "@lhci/cli": "0.14.0",
     "depcheck": "1.4.7",
     "rollup-plugin-visualizer": "5.14.0",
     "wrangler": "4.7.2"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp",
-      "workerd"
-    ]
   }
 }
