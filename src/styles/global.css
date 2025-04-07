@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+:root {
+    --sl-font: 'Fira Mono', monospace;
+  }
+  

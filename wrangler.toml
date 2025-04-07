@@ -1,8 +1,10 @@
 name = "personal-starlight-site"
 pages_build_output_dir = "./dist"
-compatibility_date = "2024-11-11"
-#compatibility_flags = [ "nodejs_compat_v2" ]
-upload_source_maps = false
+compatibility_date = "2025-04-02"
+workers_dev = false
+
+[build]
+command = "pnpm build"
 
 [vars]
 NODE_VERSION = "v23"
