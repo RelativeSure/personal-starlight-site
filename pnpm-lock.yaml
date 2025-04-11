@@ -18,8 +18,8 @@ importers:
         specifier: ^4.2.1
         version: 4.2.3(@types/node@22.13.10)(@types/react-dom@19.1.2(@types/react@19.1.0))(@types/react@19.1.0)(jiti@2.4.2)(lightningcss@1.29.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.7.0)
       '@astrojs/starlight':
-        specifier: 0.32.6
-        version: 0.32.6(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+        specifier: 0.33.1
+        version: 0.33.1(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
       '@expressive-code/plugin-line-numbers':
         specifier: ^0.40.2
         version: 0.40.2
@@ -61,7 +61,7 @@ importers:
         version: 0.34.1
       starlight-package-managers:
         specifier: ^0.10.0
-        version: 0.10.0(@astrojs/starlight@0.32.6(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)))
+        version: 0.10.0(@astrojs/starlight@0.33.1(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0)))
       tailwind-merge:
         specifier: ^3.0.0
         version: 3.2.0
@@ -138,8 +138,8 @@ packages:
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
 
-  '@astrojs/starlight@0.32.6':
-    resolution: {integrity: sha512-ASWGwNzq+0TmJ+GJFFxFFxx6Yra7BqIIMQbvOy/cweTHjqejB6mcaEWtS3Mag12LM7tXCES7v/fzmdPgjz8Yxw==}
+  '@astrojs/starlight@0.33.1':
+    resolution: {integrity: sha512-YBu9tDOBoEmRZWLoI8jAfO+pON2lEFOcViZrxwv8kpbLn3CDRkcDoP+UeO/Utwb+XVpDGrvjgmyEsqcsq54b2g==}
     peerDependencies:
       astro: ^5.1.5
 
@@ -4463,7 +4463,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.24.2
 
-  '@astrojs/starlight@0.32.6(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))':
+  '@astrojs/starlight@0.33.1(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/mdx': 4.2.3(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
       '@astrojs/sitemap': 3.2.1
@@ -8627,9 +8627,9 @@ snapshots:
       as-table: 1.0.55
       get-source: 2.0.12
 
-  starlight-package-managers@0.10.0(@astrojs/starlight@0.32.6(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))):
+  starlight-package-managers@0.10.0(@astrojs/starlight@0.33.1(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))):
     dependencies:
-      '@astrojs/starlight': 0.32.6(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
+      '@astrojs/starlight': 0.33.1(astro@5.6.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.39.0)(typescript@5.8.3)(yaml@2.7.0))
 
   statuses@2.0.1: {}
 
