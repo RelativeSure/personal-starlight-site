@@ -74,6 +74,12 @@ export default defineConfig({
             directory: "website",
           },
         },
+        {
+          label: "Windows",
+          autogenerate: {
+            directory: "windows",
+          },
+        },
       ],
     }),
     mdx(),
