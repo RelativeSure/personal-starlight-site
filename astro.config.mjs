@@ -37,10 +37,10 @@ export default defineConfig({
         "@fontsource/fira-mono/700.css",
       ],
       social: [
-        { icon: github, label: GitHub, href: "https://github.com/RelativeSure" },
-        { icon: mastodon, label: Mastodon, href: "https://infosec.exchange/@relativesure" },
-        { icon: "x.com", label: X, href: "https://x.com/RelativeSure" },
-        { icon: linkedin, label: LinkedIn, href: "https://www.linkedin.com/in/rasmusbroeggerjoergensen/" },
+        { icon: "github", label: "GitHub", href: "https://github.com/RelativeSure" },
+        { icon: "mastodon", label: "Mastodon", href: "https://infosec.exchange/@relativesure" },
+        { icon: "x.com", label: "X", href: "https://x.com/RelativeSure" },
+        { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/rasmusbroeggerjoergensen/" },
       ],
       sidebar: [
         {
