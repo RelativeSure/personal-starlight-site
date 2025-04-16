@@ -20,6 +20,9 @@ importers:
       '@astrojs/starlight':
         specifier: 0.34.0
         version: 0.34.0(astro@5.7.1(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1))
+      '@astrojs/starlight-tailwind':
+        specifier: 4.0.0
+        version: 4.0.0(@astrojs/starlight@0.34.0(astro@5.7.1(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1)))(tailwindcss@4.1.4)
       '@expressive-code/plugin-line-numbers':
         specifier: ^0.41.0
         version: 0.41.1
@@ -137,6 +140,12 @@ packages:
 
   '@astrojs/sitemap@3.3.0':
     resolution: {integrity: sha512-nYE4lKQtk+Kbrw/w0G0TTgT724co0jUsU4tPlHY9au5HmTBKbwiCLwO/15b1/y13aZ4Kr9ZbMeMHlXuwn0ty4Q==}
+
+  '@astrojs/starlight-tailwind@4.0.0':
+    resolution: {integrity: sha512-x1hPSg9FzayOg25fTlcbMtp3YAdA2KZC2G2ee2yk+JLD2j1v1ZpWXeg5QgRjeUU5V9d9Tx3HWuIrWvSC5clB2A==}
+    peerDependencies:
+      '@astrojs/starlight': '>=0.34.0'
+      tailwindcss: ^4.0.0
 
   '@astrojs/starlight@0.34.0':
     resolution: {integrity: sha512-RebhN1hoLmD/4WH0WneR2U6evEwRhwrtUcxUten9DjAZdKfCtav95kkj9aiU1manNDVBVgBliEZ9hGcOwSQXrg==}
@@ -4162,6 +4171,11 @@ snapshots:
       sitemap: 8.0.0
       stream-replace-string: 2.0.0
       zod: 3.24.2
+
+  '@astrojs/starlight-tailwind@4.0.0(@astrojs/starlight@0.34.0(astro@5.7.1(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1)))(tailwindcss@4.1.4)':
+    dependencies:
+      '@astrojs/starlight': 0.34.0(astro@5.7.1(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1))
+      tailwindcss: 4.1.4
 
   '@astrojs/starlight@0.34.0(astro@5.7.1(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.7.1))':
     dependencies:
