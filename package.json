@@ -43,6 +43,6 @@
   "devDependencies": {
     "@lhci/cli": "0.14.0",
     "depcheck": "1.4.7",
-    "wrangler": "4.13.0"
+    "wrangler": "4.13.1"
   }
 }
