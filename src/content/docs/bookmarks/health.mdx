@@ -1,11 +1,26 @@
 ---
-title: Health
+title: Health & Well-being Resources
+draft: true
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import MyLinkGrid from "../../../components/MyLinkGrid.astro";
 
-<CardGrid>
-  <LinkCard title="You Feel Like Shit" href="https://youfeellikeshit.com/" />
-  <LinkCard title="Suicide Project" href="https://suicideproject.org/" />
-  <LinkCard title="Suicide... read this first" href="https://metanoia.org/suicide/" />
-</CardGrid>
+export const healthLinks = [
+  {
+    title: "You Feel Like Shit",
+    href: "https://youfeellikeshit.com/",
+    description: "An interactive flowchart for people who feel like shit.",
+  },
+  {
+    title: "Suicide Project",
+    href: "https://suicideproject.org/",
+    description: "Resources and support for those considering suicide.",
+  },
+  {
+    title: "Suicide... read this first",
+    href: "https://metanoia.org/suicide/",
+    description: "Important information for individuals in crisis.",
+  },
+];
+
+<MyLinkGrid links={healthLinks} />;
