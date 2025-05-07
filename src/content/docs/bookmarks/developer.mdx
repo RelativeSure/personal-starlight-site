@@ -1,23 +1,27 @@
 ---
-title: Developer
+title: Developer Resources
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import MyLinkGrid from "../../../components/MyLinkGrid.astro";
 
-<CardGrid>
-  <LinkCard title="DevDocs" href="https://devdocs.io/" />
-  <LinkCard title="Awesome Selfhosted" href="https://github.com/awesome-selfhosted/awesome-selfhosted" />
-  <LinkCard title="Developer Roadmaps" href="https://roadmap.sh/" />
-  <LinkCard title="Developer Documentation" href="https://devdocs.io/" />
-  <LinkCard title="Geany - IDE" href="https://www.geany.org/" />
-  <LinkCard title="Shadcn - UI Components" href="https://ui.shadcn.com/" />
-  <LinkCard title="Supermaven - AI Copilot" href="https://supermaven.com/" />
-  <LinkCard title="Killercoda - DevOps" href="https://killercoda.com/" />
-  <LinkCard title="The Valley of Code" href="https://thevalleyofcode.com/" />
-  <LinkCard title="JSON Viewer" href="https://www.jsonviewer.tools/" />
-  <LinkCard title="Learn Git Branching" href="https://learngitbranching.js.org/" />
-  <LinkCard title="Open-Source Wiki" href="https://js.wiki/" />
-  <LinkCard title="Oh Shit, Git?!" href="https://ohshitgit.com/" />
-  <LinkCard title="Git Delta tool" href="https://github.com/dandavison/delta" />
+export const developerLinks = [
+  { title: "DevDocs", href: "https://devdocs.io/" },
+  {
+    title: "Awesome Selfhosted",
+    href: "https://github.com/awesome-selfhosted/awesome-selfhosted",
+  },
+  { title: "Developer Roadmaps", href: "https://roadmap.sh/" },
+  { title: "Developer Documentation", href: "https://devdocs.io/" }, // Note: Duplicate of DevDocs, intentional?
+  { title: "Geany - IDE", href: "https://www.geany.org/" },
+  { title: "Shadcn - UI Components", href: "https://ui.shadcn.com/" },
+  { title: "Supermaven - AI Copilot", href: "https://supermaven.com/" },
+  { title: "Killercoda - DevOps", href: "https://killercoda.com/" },
+  { title: "The Valley of Code", href: "https://thevalleyofcode.com/" },
+  { title: "JSON Viewer", href: "https://www.jsonviewer.tools/" },
+  { title: "Learn Git Branching", href: "https://learngitbranching.js.org/" },
+  { title: "Open-Source Wiki", href: "https://js.wiki/" },
+  { title: "Oh Shit, Git?!", href: "https://ohshitgit.com/" },
+  { title: "Git Delta tool", href: "https://github.com/dandavison/delta" },
+];
 
-</CardGrid>
+<MyLinkGrid links={developerLinks} />

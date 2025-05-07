@@ -1,13 +1,38 @@
 ---
-title: Miscellaneous
+title: Miscellaneous & Interesting Links
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import MyLinkGrid from "../../../components/MyLinkGrid.astro";
 
-<CardGrid>
-  <LinkCard title="Pointer Pointer" href="https://pointerpointer.com/" />
-  <LinkCard title="Practice typing by retyping ENTIRE classic novels" href="https://www.typelit.io/" />
-  <LinkCard title="Library of Babel" href="https://libraryofbabel.info/" />
-  <LinkCard title="Nuke Map" href="https://nuclearsecrecy.com/nukemap/" />
-  <LinkCard title="Update everything" href="https://www.updatecli.io" />
-</CardGrid>
+export const miscellaneousLinks = [
+  {
+    title: "Pointer Pointer",
+    href: "https://pointerpointer.com/",
+    description: "Finds a photo of someone pointing exactly at your cursor.",
+  },
+  {
+    title: "TypeLit.io",
+    href: "https://www.typelit.io/",
+    description: "Practice typing by retyping entire classic novels.",
+  },
+  {
+    title: "Library of Babel",
+    href: "https://libraryofbabel.info/",
+    description:
+      "An online re-creation of Borges' Library of Babel, containing every possible page of 3200 characters.",
+  },
+  {
+    title: "Nuke Map",
+    href: "https://nuclearsecrecy.com/nukemap/",
+    description:
+      "Visualize the effects of nuclear detonations in various locations.",
+  },
+  {
+    title: "Updatecli",
+    href: "https://www.updatecli.io",
+    description:
+      "A declarative dependency management tool that helps keep your project dependencies up-to-date.",
+  },
+];
+
+<MyLinkGrid links={miscellaneousLinks} gridTitle="Curated & Curious Finds" />

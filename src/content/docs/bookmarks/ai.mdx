@@ -1,9 +1,21 @@
 ---
-title: AI
+title: AI Resources
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import MyLinkGrid from "../../../components/MyLinkGrid.astro";
 
-<CardGrid>
-  <LinkCard title="OpenRouter Unified Interface for LLM" href="https://openrouter.ai/" />
-</CardGrid>
+export const genAILinks = [
+  {
+    title: "OpenRouter Unified Interface for LLM",
+    href: "https://openrouter.ai/",
+  },
+];
+
+export const llmAILinks = [
+  { title: "T3", href: "https://t3.chat/" },
+  { title: "Claude", href: "https://claude.ai/" },
+];
+
+<MyLinkGrid links={genAILinks} gridTitle="General AI" />
+
+<MyLinkGrid links={llmAILinks} gridTitle="Language Models" />

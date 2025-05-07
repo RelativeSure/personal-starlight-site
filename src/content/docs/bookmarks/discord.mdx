@@ -1,19 +1,48 @@
 ---
-title: Discord
+title: Discord Resources
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import MyLinkGrid from "../../../components/MyLinkGrid.astro";
 
-<CardGrid>
-  <LinkCard title="Promcord" href="https://github.com/zigsphere/promcord" />
-  <LinkCard title="DiscordJS Bot Guide" href="https://github.com/AnIdiotsGuide/discordjs-bot-guide" />
-  <LinkCard title="Discord Data Package Explorer" href="https://ddpe.androz2091.fr/" />
-  <LinkCard title="Discord Formatting" href="https://c.r74n.com/discord/formatting#Timestamps" />
-  <LinkCard title="Discord Emoji Downloader" href="https://thatiemsz.github.io/Discord-Emoji-Downloader/" />
-  <LinkCard title="Discord Emoji List" href="https://www.prosettings.com/emoji-list/" />
-  <LinkCard title="Discord Date Time Converter" href="https://rauf.wtf/datetimecord/" />
-  <LinkCard title="RedBot - Docker" href="https://github.com/PhasecoreX/docker-red-discordbot" />
-  <LinkCard title="RedBot - Audio Module" href="https://twentysix26.github.io/Red-Docs/red_audio/" />
-  <LinkCard title="RedBot - Cog Index" href="https://index.discord.red/" />
-  <LinkCard title="RedBot - ImgWelcome Module" href="https://github.com/aikaterna/imgwelcome" />
-</CardGrid>
+export const discordLinks = [
+  { title: "Promcord", href: "https://github.com/zigsphere/promcord" },
+  {
+    title: "DiscordJS Bot Guide",
+    href: "https://github.com/AnIdiotsGuide/discordjs-bot-guide",
+  },
+  {
+    title: "Discord Data Package Explorer",
+    href: "https://ddpe.androz2091.fr/",
+  },
+  {
+    title: "Discord Formatting",
+    href: "https://c.r74n.com/discord/formatting#Timestamps",
+  },
+  {
+    title: "Discord Emoji Downloader",
+    href: "https://thatiemsz.github.io/Discord-Emoji-Downloader/",
+  },
+  {
+    title: "Discord Emoji List",
+    href: "https://www.prosettings.com/emoji-list/",
+  },
+  {
+    title: "Discord Date Time Converter",
+    href: "https://rauf.wtf/datetimecord/",
+  },
+  {
+    title: "RedBot - Docker",
+    href: "https://github.com/PhasecoreX/docker-red-discordbot",
+  },
+  {
+    title: "RedBot - Audio Module",
+    href: "https://twentysix26.github.io/Red-Docs/red_audio/",
+  },
+  { title: "RedBot - Cog Index", href: "https://index.discord.red/" },
+  {
+    title: "RedBot - ImgWelcome Module",
+    href: "https://github.com/aikaterna/imgwelcome",
+  },
+];
+
+<MyLinkGrid links={discordLinks} gridTitle="Discord Tools & Resources" />
