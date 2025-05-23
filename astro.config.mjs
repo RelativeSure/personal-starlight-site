@@ -28,13 +28,9 @@ export default defineConfig({
       },
       customCss: [
         // Path to your Tailwind base styles:
-        "./src/tailwind.css",
+        // "./src/tailwind.css",
         // Relative path to your custom CSS file
         "./src/styles/global.css",
-        // Fontsource files for to regular and semi-bold font weights.
-        "@fontsource/fira-mono/400.css",
-        "@fontsource/fira-mono/500.css",
-        "@fontsource/fira-mono/700.css",
       ],
       social: [
         { icon: "github", label: "GitHub", href: "https://github.com/RelativeSure" },

@@ -1,33 +1,26 @@
-@import "tailwindcss";
+@layer base, starlight, theme, components, utilities;
 
-:root {
- --sl-font: 'Fira Mono', monospace;
- /* Dark mode */
- --sl-color-accent-low: #2c2021;
-	--sl-color-accent: #865d60;
-	--sl-color-accent-high: #d4c4c5;
- --sl-color-white: #ffffff;
- --sl-color-gray-1: #e8edff;
-	--sl-color-gray-2: #b1befd;
- --sl-color-gray-3: #6e7df6;
- --sl-color-gray-4: #4045ba;
- --sl-color-gray-5: #271c92;
- --sl-color-gray-6: #1b0077;
- --sl-color-black: #0f0f40;
-}
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
-/* Light mode colors. */
-:root[data-theme='light'] {
-	--sl-color-accent-low: #e0d3d4;
- --sl-color-accent: #885f61;
-	--sl-color-accent-high: #3f2d2e;
-	--sl-color-white: #0f0f40;
-	--sl-color-gray-1: #1b0077;
-	--sl-color-gray-2: #271c92;
-	--sl-color-gray-3: #4045ba;
-	--sl-color-gray-4: #6e7df6;
-	--sl-color-gray-5: #b1befd;
-	--sl-color-gray-6: #e8edff;
-	--sl-color-gray-7: #f4f6ff;
-	--sl-color-black: #ffffff;
+@theme {
+  /* font */
+  --font-sans: "Fira Sans";
+  --font-serif: "Fira Code";
+  --font-mono: "Fira Mono";
+  /* Generated accent color palettes. */
+  --color-accent-200: #b1cde2;
+  --color-accent-600: #0071ab;
+  --color-accent-900: #0e3650;
+  --color-accent-950: #0f2637;
+  /* Generated gray color palettes. */
+  --color-gray-100: #f3f7f7;
+  --color-gray-200: #e7f0ef;
+  --color-gray-300: #bac5c4;
+  --color-gray-400: #7b9090;
+  --color-gray-500: #495d5c;
+  --color-gray-700: #2a3c3c;
+  --color-gray-800: #182b2a;
+  --color-gray-900: #121a1a;
 }
