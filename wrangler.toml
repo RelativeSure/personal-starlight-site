@@ -3,5 +3,5 @@ pages_build_output_dir = "./dist"
 compatibility_date = "2025-04-02"
 
 [vars]
-NODE_VERSION = "v23"
+NODE_VERSION = "v24"
 PNPM_VERSION = "10"
