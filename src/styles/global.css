@@ -6,9 +6,8 @@
 
 @theme {
   /* font */
-  --font-sans: "Fira Sans";
-  --font-serif: "Fira Code";
-  --font-mono: "Fira Mono";
+  --font-sans: 'Fira Mono';
+  --font-mono: 'Fira Code';
   /* Generated accent color palettes. */
   --color-accent-200: #b1cde2;
   --color-accent-600: #0071ab;
