@@ -18,8 +18,6 @@ ci:
       lcp-lazy-loaded: 'off'
       non-composited-animations: 'off'
       prioritize-lcp-image: 'off'
-      lcp-lazy-loaded: 'off'
-      non-composited-animations: 'off'
 
   upload:
     target: 'temporary-public-storage'
