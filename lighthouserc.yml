@@ -15,6 +15,9 @@ ci:
       meta-description: 'off'
       largest-contentful-paint: 'off'
       render-blocking-resources: 'off'
+      lcp-lazy-loaded: 'off'
+      non-composited-animations: 'off'
+      prioritize-lcp-image: 'off'
 
   upload:
     target: 'temporary-public-storage'
