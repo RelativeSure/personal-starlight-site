@@ -14,6 +14,7 @@ ci:
       color-contrast: 'off'
       meta-description: 'off'
       largest-contentful-paint: 'off'
+      render-blocking-insight: 'off'
       render-blocking-resources: 'off'
       lcp-lazy-loaded: 'off'
       non-composited-animations: 'off'
