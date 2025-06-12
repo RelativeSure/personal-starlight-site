@@ -21,6 +21,7 @@ ci:
       prioritize-lcp-image: 'off'
       network-dependency-tree-insight: 'off'
       image-delivery-insight: 'off'
+      lcp-discovery-insight: 'off'
 
   upload:
     target: 'temporary-public-storage'
