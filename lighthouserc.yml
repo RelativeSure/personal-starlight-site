@@ -14,10 +14,14 @@ ci:
       color-contrast: 'off'
       meta-description: 'off'
       largest-contentful-paint: 'off'
+      render-blocking-insight: 'off'
       render-blocking-resources: 'off'
       lcp-lazy-loaded: 'off'
       non-composited-animations: 'off'
       prioritize-lcp-image: 'off'
+      network-dependency-tree-insight: 'off'
+      image-delivery-insight: 'off'
+      lcp-discovery-insight: 'off'
 
   upload:
     target: 'temporary-public-storage'
