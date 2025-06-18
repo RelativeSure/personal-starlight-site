@@ -34,7 +34,7 @@
     "astro": "5.9.4",
     "astro-robots-txt": "^1.0.0",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.516.0",
+    "lucide-react": "^0.517.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.34.0",
