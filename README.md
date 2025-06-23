@@ -50,7 +50,7 @@ This site contains documentation and resources on various topics:
 
 ## 📦 Project Structure
 
-```
+```markdown
 .
 ├── src/
 │   ├── content/    # Documentation content (MDX)
