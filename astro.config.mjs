@@ -40,6 +40,10 @@ export default defineConfig({
       ],
       sidebar: [
         {
+          label: "Contact Us",
+          link: "/contact",
+        },
+        {
           label: "Bookmarks",
           collapsed: true,
           autogenerate: {
