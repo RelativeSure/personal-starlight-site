@@ -62,6 +62,40 @@ This site contains documentation and resources on various topics:
 └── astro.config.mjs # Astro configuration
 ```
 
+## 📧 Contact Form
+
+The site includes a secure contact form with comprehensive security features:
+
+### Security Features
+- **Input Validation**: Server-side and client-side validation with sanitization
+- **Rate Limiting**: 5 requests per IP per 15-minute window
+- **XSS Protection**: Input sanitization and security headers
+- **CSRF Protection**: Secure API endpoint with proper headers
+- **Type Safety**: TypeScript validation throughout
+
+### Configuration
+
+1. Copy the environment example file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Configure your email settings in `.env`:
+   ```env
+   CONTACT_EMAIL_TO=your-email@example.com
+   ```
+
+3. The form will log submissions to console if no email is configured, making it safe for development.
+
+### API Endpoint
+
+The contact form uses `/api/contact` endpoint with:
+- JSON-only requests
+- Comprehensive input validation
+- Rate limiting per IP address
+- Security headers (XSS, CSRF protection)
+- Error handling with detailed validation messages
+
 ## 🌐 Deployment
 
 The site is configured for Cloudflare deployment using Wrangler.
