@@ -118,6 +118,7 @@ function getClientIP(request: Request): string {
 async function sendEmail(data: ContactFormData): Promise<{ success: boolean; error?: string }> {
   // Email sending logic would go here
   // For security, we'll use environment variables for configuration
+  // Compatible with Cloudflare Pages runtime when using @astrojs/cloudflare adapter
   const emailTo = import.meta.env.CONTACT_EMAIL_TO;
   const emailService = import.meta.env.CONTACT_EMAIL_SERVICE;
   

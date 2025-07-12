@@ -4,10 +4,13 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 import tailwindcss from "@tailwindcss/vite";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
+  output: "server",
+  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()],
   },
