@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 import tailwindcss from "@tailwindcss/vite";
 import cloudflare from "@astrojs/cloudflare";
@@ -86,7 +85,6 @@ export default defineConfig({
       ],
     }),
     mdx(),
-    react(),
     robotsTxt(),
   ],
 });
