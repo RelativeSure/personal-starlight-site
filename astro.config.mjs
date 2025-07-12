@@ -1,13 +1,15 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
-import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
 import tailwindcss from "@tailwindcss/vite";
+import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
+  output: "server",
+  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()],
   },
@@ -39,6 +41,10 @@ export default defineConfig({
         { icon: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/rasmusbroeggerjoergensen/" },
       ],
       sidebar: [
+        {
+          label: "Contact Us",
+          link: "/contact",
+        },
         {
           label: "Bookmarks",
           collapsed: true,
@@ -79,7 +85,6 @@ export default defineConfig({
       ],
     }),
     mdx(),
-    react(),
     robotsTxt(),
   ],
 });
