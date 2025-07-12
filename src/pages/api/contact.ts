@@ -128,7 +128,10 @@ async function sendEmail(data: ContactFormData): Promise<{ success: boolean; err
       name: data.name,
       message: data.message.substring(0, 100) + '...'
     });
-    return { success: true }; // Return success even if email isn't configured
+    return { 
+      success: false, 
+      error: 'Email service is not configured. Please contact the site administrator.' 
+    };
   }
 
   // Here you would integrate with your preferred email service
