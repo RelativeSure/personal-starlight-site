@@ -19,19 +19,21 @@
 
 <script>
   const themeToggle = document.getElementById('theme-toggle');
-  const theme = localStorage.getItem('theme');
+  if (themeToggle) {
+    const theme = localStorage.getItem('theme');
 
-  if (theme === 'dark') {
-    document.documentElement.classList.add('dark');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem(
+        'theme',
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+      );
+    });
   }
-
-  themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem(
-      'theme',
-      document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-    );
-  });
 </script>
 
 <style>
