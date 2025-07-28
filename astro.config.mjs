@@ -23,6 +23,9 @@ export default defineConfig({
         baseUrl:
           "https://github.com/RelativeSure/personal-starlight-site/edit/main/",
       },
+      components: {
+        ThemeSelect: "./src/components/starlight/ThemeSelect.astro",
+      },
       expressiveCode: {
         themes: ["material-theme-ocean", "material-theme-lighter"],
       },
