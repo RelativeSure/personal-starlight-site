@@ -23,3 +23,18 @@
   --color-gray-800: #182b2a;
   --color-gray-900: #121a1a;
 }
+
+.dark {
+  --color-accent-200: #0e3650;
+  --color-accent-600: #b1cde2;
+  --color-accent-900: #0071ab;
+  --color-accent-950: #b1cde2;
+  --color-gray-100: #121a1a;
+  --color-gray-200: #182b2a;
+  --color-gray-300: #2a3c3c;
+  --color-gray-400: #495d5c;
+  --color-gray-500: #7b9090;
+  --color-gray-700: #bac5c4;
+  --color-gray-800: #e7f0ef;
+  --color-gray-900: #f3f7f7;
+}
