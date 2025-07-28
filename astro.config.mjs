@@ -3,14 +3,9 @@ import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
-import tailwindcss from "@tailwindcss/vite";
-
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
-  vite: {
-    plugins: [tailwindcss()],
-  },
   integrations: [
     starlight({
       title: "Rasmus Brøgger Jørgensen",
