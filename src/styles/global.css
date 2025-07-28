@@ -15,14 +15,14 @@
   --sl-color-accent: #0071ab;
   --sl-color-accent-high: #0e3650;
 
-  --sl-color-white: #121a1a;
-  --sl-color-gray-1: #182b2a;
-  --sl-color-gray-2: #2a3c3c;
-  --sl-color-gray-3: #495d5c;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f3f7f7;
+  --sl-color-gray-2: #e7f0ef;
+  --sl-color-gray-3: #bac5c4;
   --sl-color-gray-4: #7b9090;
-  --sl-color-gray-5: #bac5c4;
-  --sl-color-gray-6: #e7f0ef;
-  --sl-color-black: #ffffff;
+  --sl-color-gray-5: #495d5c;
+  --sl-color-gray-6: #2a3c3c;
+  --sl-color-black: #121a1a;
 }
 
 /* Dark mode colors */
@@ -48,14 +48,14 @@
   --sl-color-accent: #0071ab;
   --sl-color-accent-high: #0e3650;
 
-  --sl-color-white: #121a1a;
-  --sl-color-gray-1: #182b2a;
-  --sl-color-gray-2: #2a3c3c;
-  --sl-color-gray-3: #495d5c;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f3f7f7;
+  --sl-color-gray-2: #e7f0ef;
+  --sl-color-gray-3: #bac5c4;
   --sl-color-gray-4: #7b9090;
-  --sl-color-gray-5: #bac5c4;
-  --sl-color-gray-6: #e7f0ef;
-  --sl-color-black: #ffffff;
+  --sl-color-gray-5: #495d5c;
+  --sl-color-gray-6: #2a3c3c;
+  --sl-color-black: #121a1a;
 }
 
 /* Blue Ocean Theme */
