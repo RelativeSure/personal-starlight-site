@@ -4,12 +4,29 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-/* Dark mode colors (default) */
+/* Default fallback (no theme set) - use light mode */
 :root {
   /* font */
   --font-family-sans: 'Fira Mono', monospace;
   --font-family-mono: 'Fira Code', monospace;
 
+  /* Light theme colors as default fallback */
+  --sl-color-accent-low: #d1e5f0;
+  --sl-color-accent: #0071ab;
+  --sl-color-accent-high: #0e3650;
+
+  --sl-color-white: #121a1a;
+  --sl-color-gray-1: #182b2a;
+  --sl-color-gray-2: #2a3c3c;
+  --sl-color-gray-3: #495d5c;
+  --sl-color-gray-4: #7b9090;
+  --sl-color-gray-5: #bac5c4;
+  --sl-color-gray-6: #e7f0ef;
+  --sl-color-black: #ffffff;
+}
+
+/* Dark mode colors */
+:root[data-theme='dark'] {
   /* Dark theme colors - much darker backgrounds */
   --sl-color-accent-low: #1e3a5f;
   --sl-color-accent: #5fb3f3;

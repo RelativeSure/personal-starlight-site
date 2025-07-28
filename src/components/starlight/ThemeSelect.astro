@@ -37,9 +37,21 @@ const t = (key: string) => {
 
 <script>
 class StarlightThemeSelect extends HTMLElement {
+	private mediaQuery: MediaQueryList | null = null;
+
 	constructor() {
 		super();
+
+		// Set up system preference listener BEFORE applying theme
+		if (typeof matchMedia !== 'undefined') {
+			this.mediaQuery = matchMedia('(prefers-color-scheme: dark)');
+			this.mediaQuery.addEventListener('change', this.handleSystemThemeChange);
+		}
+
+		// Apply initial theme
 		this.onThemeChange(this.getTheme());
+
+		// Attach event listener after initialization
 		this.querySelector('select')?.addEventListener('change', (e) => {
 			if (e.currentTarget instanceof HTMLSelectElement) {
 				this.onThemeChange(this.parseTheme(e.currentTarget.value));
@@ -87,21 +99,22 @@ class StarlightThemeSelect extends HTMLElement {
 		doc.classList.remove('theme-light', 'theme-dark', 'theme-blue', 'theme-forest', 'theme-sunset', 'theme-purple');
 		doc.removeAttribute('data-theme');
 
-		// Apply the new theme
+		// Apply the new theme - consistently use both data-theme and classes
 		if (theme === 'light') {
 			doc.setAttribute('data-theme', 'light');
 			doc.classList.add('theme-light');
 		} else if (theme === 'dark') {
-			// For dark mode, we don't set data-theme since :root is dark by default
+			doc.setAttribute('data-theme', 'dark');
 			doc.classList.add('theme-dark');
 		} else if (theme === 'auto') {
 			// For auto, detect system preference
-			const systemPrefersDark = typeof matchMedia !== 'undefined' && matchMedia('(prefers-color-scheme: dark)').matches;
+			const systemPrefersDark = this.mediaQuery ? this.mediaQuery.matches :
+				(typeof matchMedia !== 'undefined' && matchMedia('(prefers-color-scheme: dark)').matches);
+
 			if (systemPrefersDark) {
-				// Dark mode - no data-theme needed, just class
+				doc.setAttribute('data-theme', 'dark');
 				doc.classList.add('theme-dark');
 			} else {
-				// Light mode - set data-theme
 				doc.setAttribute('data-theme', 'light');
 				doc.classList.add('theme-light');
 			}
@@ -117,6 +130,29 @@ class StarlightThemeSelect extends HTMLElement {
 		} else if (theme === 'purple') {
 			doc.setAttribute('data-theme', 'purple');
 			doc.classList.add('theme-purple');
+		}
+	}
+
+	/** Cleanup method for removing event listeners */
+	disconnectedCallback() {
+		if (this.mediaQuery) {
+			// Note: MediaQueryList.removeEventListener might not be available in all browsers
+			// This is a safeguard for proper cleanup
+			try {
+				this.mediaQuery.removeEventListener('change', this.handleSystemThemeChange);
+			} catch (e) {
+				// Fallback: removeListener is deprecated but more widely supported
+				if ('removeListener' in this.mediaQuery) {
+					(this.mediaQuery as any).removeListener(this.handleSystemThemeChange);
+				}
+			}
+		}
+	}
+
+	/** Bound method for system theme change handling */
+	private handleSystemThemeChange = () => {
+		if (this.getTheme() === 'auto') {
+			this.updateTheme('auto');
 		}
 	}
 }
@@ -161,61 +197,51 @@ customElements.define('starlight-theme-select', StarlightThemeSelect);
 	}
 
 	/* Icon visibility based on theme */
-	:global(.theme-light) .icon.light,
-	:global([data-theme='light']) .icon.light {
-		color: var(--sl-color-accent);
-	}
-
-	:global(.theme-dark) .icon.dark,
-	:global([data-theme='dark']) .icon.dark {
-		color: var(--sl-color-accent);
-	}
-
-	:global(.theme-blue) .icon.light,
-	:global([data-theme='blue']) .icon.light,
-	:global(.theme-forest) .icon.light,
-	:global([data-theme='forest']) .icon.light,
-	:global(.theme-sunset) .icon.light,
-	:global([data-theme='sunset']) .icon.light,
-	:global(.theme-purple) .icon.light,
-	:global([data-theme='purple']) .icon.light {
-		color: var(--sl-color-accent);
-	}
-
-	/* Hide non-active icons */
 	.icon {
 		opacity: 0.6;
 	}
 
-	:global(.theme-light) .icon:not(.light),
-	:global([data-theme='light']) .icon:not(.light),
-	:global(.theme-dark) .icon:not(.dark),
-	:global([data-theme='dark']) .icon:not(.dark),
-	:global(.theme-blue) .icon:not(.light),
-	:global([data-theme='blue']) .icon:not(.light),
-	:global(.theme-forest) .icon:not(.light),
-	:global([data-theme='forest']) .icon:not(.light),
-	:global(.theme-sunset) .icon:not(.light),
-	:global([data-theme='sunset']) .icon:not(.light),
-	:global(.theme-purple) .icon:not(.light),
-	:global([data-theme='purple']) .icon:not(.light) {
-		opacity: 0.3;
+	/* Light theme shows light icon */
+	:global([data-theme='light']) .icon.light,
+	:global(.theme-light) .icon.light {
+		opacity: 1;
+		color: var(--sl-color-accent);
 	}
 
-	/* Show active icon */
-	:global(.theme-light) .icon.light,
-	:global([data-theme='light']) .icon.light,
-	:global(.theme-dark) .icon.dark,
+	/* Dark theme shows dark icon */
 	:global([data-theme='dark']) .icon.dark,
-	:global(.theme-blue) .icon.light,
-	:global([data-theme='blue']) .icon.light,
-	:global(.theme-forest) .icon.light,
-	:global([data-theme='forest']) .icon.light,
-	:global(.theme-sunset) .icon.light,
-	:global([data-theme='sunset']) .icon.light,
-	:global(.theme-purple) .icon.light,
-	:global([data-theme='purple']) .icon.light {
+	:global(.theme-dark) .icon.dark {
 		opacity: 1;
+		color: var(--sl-color-accent);
+	}
+
+	/* Custom themes show light icon (consolidated) */
+	:global([data-theme='blue']) .icon.light,
+	:global([data-theme='forest']) .icon.light,
+	:global([data-theme='sunset']) .icon.light,
+	:global([data-theme='purple']) .icon.light,
+	:global(.theme-blue) .icon.light,
+	:global(.theme-forest) .icon.light,
+	:global(.theme-sunset) .icon.light,
+	:global(.theme-purple) .icon.light {
+		opacity: 1;
+		color: var(--sl-color-accent);
+	}
+
+	/* Hide inactive icons */
+	:global([data-theme='light']) .icon:not(.light),
+	:global([data-theme='dark']) .icon:not(.dark),
+	:global([data-theme='blue']) .icon:not(.light),
+	:global([data-theme='forest']) .icon:not(.light),
+	:global([data-theme='sunset']) .icon:not(.light),
+	:global([data-theme='purple']) .icon:not(.light),
+	:global(.theme-light) .icon:not(.light),
+	:global(.theme-dark) .icon:not(.dark),
+	:global(.theme-blue) .icon:not(.light),
+	:global(.theme-forest) .icon:not(.light),
+	:global(.theme-sunset) .icon:not(.light),
+	:global(.theme-purple) .icon:not(.light) {
+		opacity: 0.3;
 	}
 
 	@media (forced-colors: active) {
