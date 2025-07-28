@@ -1,0 +1,20 @@
+---
+import ThemeSwitcher from './ThemeSwitcher.astro';
+import PageFrame from '@astrojs/starlight/components/PageFrame.astro';
+---
+
+<PageFrame {...Astro.props}>
+  <slot />
+  <div class="theme-switcher-container">
+    <ThemeSwitcher />
+  </div>
+</PageFrame>
+
+<style>
+  .theme-switcher-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+  }
+</style>
