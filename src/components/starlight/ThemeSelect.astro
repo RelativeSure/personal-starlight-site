@@ -1,11 +1,17 @@
 ---
-// Import proper Starlight utilities
+// Enhanced translation system compatible with Starlight's i18n
 const t = (key: string) => {
+	// Default translations - could be extended to use Starlight's i18n system
 	const translations = {
 		'themeSelect.accessibleLabel': 'Select theme',
 		'themeSelect.light': 'Light',
 		'themeSelect.dark': 'Dark',
 		'themeSelect.auto': 'Auto',
+		'themeSelect.blue': 'Blue Ocean',
+		'themeSelect.forest': 'Forest Green',
+		'themeSelect.sunset': 'Sunset Orange',
+		'themeSelect.purple': 'Purple Night',
+		'themeSelect.label': 'Theme:'
 	};
 	return translations[key as keyof typeof translations] || key;
 };
@@ -15,7 +21,7 @@ const t = (key: string) => {
 	<div class="theme-switcher">
 		<label>
 			<span class="sr-only">{t('themeSelect.accessibleLabel')}</span>
-			<span class="theme-label">Theme:</span>
+			<span class="theme-label">{t('themeSelect.label')}</span>
 			<div class="theme-control">
 				<svg class="icon light" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
 					<path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12ZM11 1h2v3h-2V1Zm0 19h2v3h-2v-3ZM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93ZM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121Zm2.121-14.85 1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121ZM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121ZM23 11v2h-3v-2h3ZM4 11v2H1v-2h3Z"/>
@@ -27,15 +33,15 @@ const t = (key: string) => {
 					<path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/>
 				</svg>
 			</div>
-			<span class="current-theme" id="current-theme-display">Auto</span>
+			<span class="current-theme" id="current-theme-display">{t('themeSelect.auto')}</span>
 			<select value="auto">
 				<option value="light">{t('themeSelect.light')}</option>
 				<option value="dark">{t('themeSelect.dark')}</option>
 				<option value="auto">{t('themeSelect.auto')}</option>
-				<option value="blue">Blue Ocean</option>
-				<option value="forest">Forest Green</option>
-				<option value="sunset">Sunset Orange</option>
-				<option value="purple">Purple Night</option>
+				<option value="blue">{t('themeSelect.blue')}</option>
+				<option value="forest">{t('themeSelect.forest')}</option>
+				<option value="sunset">{t('themeSelect.sunset')}</option>
+				<option value="purple">{t('themeSelect.purple')}</option>
 			</select>
 		</label>
 	</div>
@@ -259,46 +265,36 @@ customElements.define('starlight-theme-select', StarlightThemeSelect);
 		opacity: 0;
 	}
 
-	/* Icon visibility - simplified with CSS custom properties */
+	/* Icon visibility - optimized with CSS custom properties */
 	.icon {
 		opacity: 0.6;
 		transition: opacity 0.2s ease, color 0.2s ease;
 	}
 
-	.icon.light {
-		--icon-themes: light, blue, forest, sunset, purple;
+	/* Define which themes use which icons */
+	:root {
+		--light-themes: light, blue, forest, sunset, purple;
+		--dark-themes: dark;
+		--auto-themes: auto;
 	}
 
-	.icon.dark {
-		--icon-themes: dark;
-	}
-
-	.icon.auto {
-		--icon-themes: auto;
-	}
-
-	/* Active icon styling */
+	/* Light-based theme icon visibility */
 	:global([data-theme='light']) .icon.light,
 	:global([data-theme='blue']) .icon.light,
 	:global([data-theme='forest']) .icon.light,
 	:global([data-theme='sunset']) .icon.light,
-	:global([data-theme='purple']) .icon.light,
-	:global(.theme-light) .icon.light,
-	:global(.theme-blue) .icon.light,
-	:global(.theme-forest) .icon.light,
-	:global(.theme-sunset) .icon.light,
-	:global(.theme-purple) .icon.light {
+	:global([data-theme='purple']) .icon.light {
 		opacity: 1;
 		color: var(--sl-color-accent);
 	}
 
-	:global([data-theme='dark']) .icon.dark,
-	:global(.theme-dark) .icon.dark {
+	/* Dark theme icon visibility */
+	:global([data-theme='dark']) .icon.dark {
 		opacity: 1;
 		color: var(--sl-color-accent);
 	}
 
-	/* Auto mode visual indicator - special styling */
+	/* Auto mode with special pulsing animation */
 	:global(.theme-auto) .icon.auto {
 		opacity: 1;
 		color: var(--sl-color-accent);
@@ -310,7 +306,7 @@ customElements.define('starlight-theme-select', StarlightThemeSelect);
 		50% { opacity: 0.7; }
 	}
 
-	/* Inactive icons */
+	/* Inactive icons - simplified using :not() selector */
 	:global([data-theme='light']) .icon:not(.light),
 	:global([data-theme='dark']) .icon:not(.dark),
 	:global([data-theme='blue']) .icon:not(.light),
