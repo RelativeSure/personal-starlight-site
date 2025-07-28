@@ -10,19 +10,19 @@
   --font-family-sans: 'Fira Mono', monospace;
   --font-family-mono: 'Fira Code', monospace;
 
-  /* Dark theme colors */
-  --sl-color-accent-low: #0e3650;
-  --sl-color-accent: #4da3e0;
-  --sl-color-accent-high: #b1cde2;
+  /* Dark theme colors - much darker backgrounds */
+  --sl-color-accent-low: #1e3a5f;
+  --sl-color-accent: #5fb3f3;
+  --sl-color-accent-high: #cce7ff;
 
-  --sl-color-white: #f3f7f7;
-  --sl-color-gray-1: #e7f0ef;
-  --sl-color-gray-2: #bac5c4;
-  --sl-color-gray-3: #7b9090;
-  --sl-color-gray-4: #495d5c;
-  --sl-color-gray-5: #2a3c3c;
-  --sl-color-gray-6: #182b2a;
-  --sl-color-black: #121a1a;
+  --sl-color-white: #e8f4ff;
+  --sl-color-gray-1: #f0f8ff;
+  --sl-color-gray-2: #d0dde8;
+  --sl-color-gray-3: #9bb0c1;
+  --sl-color-gray-4: #6b7f8f;
+  --sl-color-gray-5: #3d4f5a;
+  --sl-color-gray-6: #1f2937;
+  --sl-color-black: #0a0f14;
 }
 
 /* Light mode colors */
