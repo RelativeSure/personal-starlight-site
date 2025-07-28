@@ -3,14 +3,11 @@ import starlight from "@astrojs/starlight";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import robotsTxt from "astro-robots-txt";
-import tailwindcss from "@tailwindcss/vite";
+import starlightTailwind from "@astrojs/starlight-tailwind";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://rasmusj.dk",
-  vite: {
-    plugins: [tailwindcss()],
-  },
   integrations: [
     starlight({
       title: "Rasmus Brøgger Jørgensen",
@@ -78,7 +75,8 @@ export default defineConfig({
         },
       ],
       components: {
-        PageFrame: "./src/components/PageFrame.astro",
+        Head: "./src/components/Head.astro",
+        PageFrame: "./src/components/CustomPageFrame.astro",
       }
     }),
     mdx(),
