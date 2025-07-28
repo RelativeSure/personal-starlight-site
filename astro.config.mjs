@@ -77,6 +77,9 @@ export default defineConfig({
           },
         },
       ],
+      components: {
+        ThemeSelect: "./src/components/ThemeSelect.astro",
+      }
     }),
     mdx(),
     react(),
