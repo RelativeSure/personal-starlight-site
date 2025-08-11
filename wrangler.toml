@@ -1,6 +1,9 @@
 name = "personal-starlight-site"
 pages_build_output_dir = "./dist"
-compatibility_date = "2025-04-02"
+compatibility_date = "2025-08-07"
+
+[assets]
+directory = "./dist"
 
 [vars]
 NODE_VERSION = "v24"
