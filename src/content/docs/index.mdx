@@ -26,36 +26,40 @@ hero:
         rel: me
 ---
 
-import { Aside, Card, CardGrid, LinkButton, LinkCard, Icon } from "@astrojs/starlight/components";
+import { Aside, Card, CardGrid, LinkButton, LinkCard, Icon, Tabs, TabItem } from "@astrojs/starlight/components";
 
 ## About Rasmus
 
 <CardGrid>
   <Card title="About Me" icon="open-book">
-Experienced DevOps Engineer with a strong focus on automating infrastructure and streamlining
-	development workflows.
-Passionate about implementing efficient CI/CD pipelines and maintaining
-	robust cloud infrastructure.
+    Experienced DevOps Engineer with a strong focus on automating infrastructure and streamlining
+    development workflows.
+    Passionate about implementing efficient CI/CD pipelines and maintaining
+    robust cloud infrastructure.
 
-	<Aside title="Education">
+    <Aside title="Education">
+      <Tabs>
+        <TabItem label="Datatechnician">
+          I have a degree as a Datatechnician with a specialization in infrastructure, where I achieved a grade of 12(A).
+        </TabItem>
+        <TabItem label="IT-Supporter">
+          I am also a certified IT-Supporter, having graduated with a grade of 12(A).
+        </TabItem>
+      </Tabs>
+    </Aside>
 
-	Datatechnician with specialization in infrastructure - grade 12(A)
-
-  IT-Supporter - grade 12(A)
-
-	</Aside>
-
-	<Aside title="Experience">
-
-	DevOps / System Administrator DanMagi June 2025 - Present
-
-	Platform Engineer Udviklings og Forenklingsstyrelsen Apr 2023 - May 2025
-
-	Operations Engineer Netcompany  Dec 2021 - Feb 2023
-
-	Operations Analyst Netcompany Jun 2020 - Dec 2021
-
-	</Aside>
+    <Aside title="Experience">
+      <Tabs>
+        <TabItem label="Current">
+          **DevOps / System Administrator** at _DanMagi_ (June 2025 - Present)
+        </TabItem>
+        <TabItem label="Previous">
+          - **Platform Engineer** at _Udviklings og Forenklingsstyrelsen_ (Apr 2023 - May 2025)
+          - **Operations Engineer** at _Netcompany_ (Dec 2021 - Feb 2023)
+          - **Operations Analyst** at _Netcompany_ (Jun 2020 - Dec 2021)
+        </TabItem>
+      </Tabs>
+    </Aside>
   </Card>
   <Card title="Experience" icon="seti:db">
     <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>
