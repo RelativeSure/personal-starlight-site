@@ -26,46 +26,111 @@ hero:
         rel: me
 ---
 
-import { Aside, Card, CardGrid, LinkButton, LinkCard, Icon } from "@astrojs/starlight/components";
+import { Aside, Card, CardGrid, LinkButton, LinkCard, Icon, Tabs, TabItem } from "@astrojs/starlight/components";
 
 ## About Rasmus
 
 <CardGrid>
   <Card title="About Me" icon="open-book">
-Experienced DevOps Engineer with a strong focus on automating infrastructure and streamlining
-	development workflows.
-Passionate about implementing efficient CI/CD pipelines and maintaining
-	robust cloud infrastructure.
+    Experienced DevOps Engineer with a strong focus on automating infrastructure and streamlining
+    development workflows.
+    Passionate about implementing efficient CI/CD pipelines and maintaining
+    robust cloud infrastructure.
 
-	<Aside title="Education">
+    <Aside title="Education">
+      <Tabs>
+        <TabItem label="Datatechnician">
+          **Degree:** Datatechnician, Infrastructure Specialist
+          <br/>
+          **Grade:** 12 (A)
+        </TabItem>
+        <TabItem label="IT-Supporter">
+          **Degree:** IT-Supporter
+          <br/>
+          **Grade:** 12 (A)
+        </TabItem>
+      </Tabs>
+    </Aside>
 
-	Datatechnician with specialization in infrastructure - grade 12(A)
-
-  IT-Supporter - grade 12(A)
-
-	</Aside>
-
-	<Aside title="Experience">
-
-	DevOps / System Administrator DanMagi June 2025 - Present
-
-	Platform Engineer Udviklings og Forenklingsstyrelsen Apr 2023 - May 2025
-
-	Operations Engineer Netcompany  Dec 2021 - Feb 2023
-
-	Operations Analyst Netcompany Jun 2020 - Dec 2021
-
-	</Aside>
+    <Aside title="Experience">
+      <Tabs>
+        <TabItem label="Current">
+          **DanMagi**
+          <br/>
+          DevOps / System Administrator (June 2025 - Present)
+        </TabItem>
+        <TabItem label="Previous">
+          **Udviklings og Forenklingsstyrelsen**
+          <br/>
+          Platform Engineer (Apr 2023 - May 2025)
+          ***
+          **Netcompany**
+          <br/>
+          Operations Engineer (Dec 2021 - Feb 2023)
+          <br/>
+          Operations Analyst (Jun 2020 - Dec 2021)
+        </TabItem>
+      </Tabs>
+    </Aside>
   </Card>
-  <Card title="Experience" icon="seti:db">
-    <Aside>`* means Rasmus has limited knowledge and/or experience `</Aside>
-	- **Code** (Bash, Python, Gradle, Javascript/Typescript*)
-	- **Containers** (Docker, On-Prem & Azure Kubernetes, Rancher)
-	- **Databases** (OracleDB, Redis, PostgreSQL, MySQL/MariaDB)
-	- **Git** (GitHub, GitLab, Azure DevOps*)
-	- **Infrastructure as Code** (Ansible*, Terraform, Packer, Puppet)
-	- **Linux** (RedHat, Debian, Kali, NixOS*)
-	- **Networking** (Cisco, Fortinet*)
-	- **Windows** (ActiveDirectory, Group Policy Management, RSAT)
+  <Card title="Technologies" icon="seti:db">
+    <Aside>`* An asterisk indicates areas where I am actively expanding my knowledge.`</Aside>
+    <details>
+      <summary>Code</summary>
+      - Bash
+      - Python
+      - Gradle
+      - Javascript/Typescript*
+    </details>
+    <details>
+      <summary>Containers</summary>
+      - Docker
+      - On-Prem & Azure Kubernetes
+      - Rancher
+    </details>
+    <details>
+      <summary>Databases</summary>
+      - OracleDB
+      - Redis
+      - PostgreSQL
+      - MySQL/MariaDB
+    </details>
+    <details>
+      <summary>Git</summary>
+      - GitHub
+      - GitLab
+      - Azure DevOps*
+    </details>
+    <details>
+      <summary>Infrastructure as Code</summary>
+      - Ansible*
+      - Terraform
+      - Packer
+      - Puppet
+    </details>
+    <details>
+      <summary>Linux</summary>
+      - RedHat
+      - Debian
+      - Kali
+      - NixOS*
+    </details>
+    <details>
+      <summary>Networking</summary>
+      - Cisco
+      - Fortinet*
+    </details>
+    <details>
+      <summary>Windows</summary>
+      - ActiveDirectory
+      - Group Policy Management
+      - RSAT
+    </details>
+  </Card>
+  <Card title="Achievements & Certificates" icon="rocket">
+    - **Certificate for ambition in Education**
+      - Awarded with a diploma, medal, and scholarship.
+    - **SOC Core Skills with John Stand** (April 2025)
+    - **Introduction Badge from PentesterLab** (April 2022)
   </Card>
 </CardGrid>
