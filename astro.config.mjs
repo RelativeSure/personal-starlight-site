@@ -29,6 +29,12 @@ export default defineConfig({
       expressiveCode: {
         themes: ["material-theme-ocean", "material-theme-lighter"],
       },
+      pagefind: {
+        ranking: {
+          pageLength: 0.5,
+          termFrequency: 0.8,
+        },
+      },
       customCss: [
         // Path to your Tailwind base styles:
         // "./src/tailwind.css",
